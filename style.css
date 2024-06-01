@@ -1,7 +1,39 @@
 h2{
-    color: lightcoral;
+    color: white;
+    text-align: center;
+    font-size: 10px;
+    font-family:sans-serif
+}
+
+.rex h2{
+    color: black;
+    position: absolute;
+    top: 8%;
+    right: 0%;
+    margin-right: 230px;
+    font-family:sans-serif
+}
+.rex:hover{
+    color: blue;
 }
 
 body{
-    background-color: #0f0f0f;
+    background-color: white;
+}
+
+.tbone{
+    width: 99px;
+    height: 52px;
+    background: #EE5151;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 6%;
+    right: 0%;
+    margin-right: 50px;
+}
+
+.tbone:hover{
+    background-color: blue;
 }
