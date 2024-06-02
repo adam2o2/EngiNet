@@ -62,6 +62,14 @@ body {
     color: white;
     margin: 0 20px;
 }
+.test-one:hover{
+    background-color: green;
+    cursor: pointer;
+}
+.test-two:hover{
+    background-color: red;
+    cursor: pointer;
+}
 
 .test-two{
     background: #F4BB4B;
