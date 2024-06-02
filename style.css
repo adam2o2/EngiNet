@@ -1,39 +1,68 @@
-h2{
+h2 {
     color: white;
     text-align: center;
     font-size: 10px;
-    font-family:sans-serif
+    font-family: sans-serif;
 }
 
-.rex h2{
-    color: black;
-    position: absolute;
-    top: 8%;
-    right: 0%;
-    margin-right: 230px;
-    font-family:sans-serif
-}
-.rex:hover{
-    color: blue;
-}
-
-body{
+body {
     background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
 }
 
-.tbone{
+.tbone {
     width: 99px;
     height: 52px;
     background: #EE5151;
     border-radius: 8px;
     border: none;
     cursor: pointer;
-    position: absolute;
-    top: 6%;
-    right: 0%;
-    margin-right: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.tbone:hover{
+.tbone:hover {
     background-color: blue;
+}
+
+.rex {
+    margin-top: 20px;
+}
+
+.rex h2 {
+    color: black;
+    font-family: sans-serif;
+}
+
+.rex:hover h2 {
+    color: blue;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.test-one, .test-two {
+    width: 400px;
+    height: 300px;
+    background: #0f0f0f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin: 0 20px;
+}
+
+.test-two{
+    background: #F4BB4B;
 }
