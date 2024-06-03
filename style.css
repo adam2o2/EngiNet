@@ -53,7 +53,7 @@ body {
     margin-top: 20px;
 }
 
-.test-one, .test-two {
+.test-one, .test-two, .test-three {
     box-shadow: 10px 10px 5px 5px rgb(87, 98, 102);
     width: 400px;
     height: 300px;
@@ -71,6 +71,10 @@ body {
 }
 .test-two:hover{
     background-color: red;
+    cursor: pointer;
+}
+.test-three:hover{
+    background-color: blue;
     cursor: pointer;
 }
 
