@@ -1,103 +1,63 @@
-h2 {
-    color: white;
-    text-align: center;
-    font-size: 10px;
-    font-family: sans-serif;
-}
-
-body {
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-}
-
-.top-container {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-top: 30px;
-}
-
-.tbone {
-    width: 500px;
-    height: 52px;
-    background: #EE5151;
-    border-radius: 50px;
+.box-1{
+    width: 473px;
+    height: 268px;
+    background: #F47521;
     border: none;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 400px;
+    margin-left: 10px;
+    position: relative; /* Make box-1 a relatively positioned container */
 }
 
-.tbone h2{
-    font-size: 16px;
-    margin-right: 400px;
-}
-
-.tbone:hover {
-    background-color: blue;
-}
-
-.main-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    margin-top: 150px;
-}
-.rex {
-    margin-top: 20px;
-}
-
-.rex h2 {
-    color: rgb(255, 0, 191);
-    font-family: sans-serif;
-}
-
-.rex:hover h2 {
-    color: blue;
-}
-
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin-top: 20px;
-}
-
-.test-one, .test-two, .test-three {
-    box-shadow: 10px 10px 5px 5px rgb(87, 98, 102);
-    width: 400px;
-    height: 300px;
-    background: orange;
+.box-2{
+    width: 50px;
+    height: 50px;
+    background: #817a76;
+    border: none;
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
-    margin: 0 20px;
-    border-radius: 8px;
+    position: absolute; /* Position box-2 absolutely inside box-1 */
+    top: 10px; /* Align to the top of box-1 */
+    right: 10px; /* Align to the right of box-1 */
 }
 
-.test-one:hover {
-    background-color: green;
+.circle-1 {
+    width: 50px;
+    height: 50px;
+    background: #00BFFF; /* Example color, change as needed */
+    border-radius: 50%; /* Make it a circle */
+    position: absolute; /* Position circle-1 absolutely inside box-1 */
+    margin-left: 10px;
+}
+
+
+.rectangle-1 {
+    width: 370px;
+    height: 30px;
+    background: #817a76;
+    border: none;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 80px;
+    margin-top: 10px;
 }
 
-.test-two:hover {
-    background-color: red;
+.rectangle-2 {
+    width: 200px;
+    height: 30px;
+    background: #cccac9;
+    border: none;
     cursor: pointer;
-}
-
-.test-three:hover {
-    background-color: blue;
-    cursor: pointer;
-}
-
-.test-two {
-    background: #F4BB4B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 80px;
+    margin-top: 10px;
 }
