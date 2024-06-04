@@ -24,9 +24,9 @@ body {
 
 
 .box-1 {
-    width: 473px;
-    height: 268px;
-    background: #F47521;
+    height: 794.63px;
+    width: 519.59px;
+    background: linear-gradient(to top, rgba(36, 33, 244, 0),#F47521 );
     border: none;
     cursor: pointer;
     display: flex;
