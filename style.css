@@ -225,8 +225,8 @@ body {
     background: #00BFFF;
     border-radius: 50%;
     position: absolute;
-    bottom: 530px;
-    left: 800px;
+    bottom: 180px;
+    left: 440px;
 }
 
 .rectangle-top1 {
@@ -239,8 +239,8 @@ body {
     align-items: center;
     justify-content: center;
     position: absolute;
-    bottom: 589px;
-    left: 925px;
+    bottom: 240px;
+    left: 566px;
 }
 
 .rectangle-top2 {
@@ -253,8 +253,8 @@ body {
     align-items: center;
     justify-content: center;
     position: absolute;
-    bottom: 535px;
-    left: 925px;
+    bottom: 180px;
+    left: 566px;
 }
 
 .triangle-circle {
@@ -264,8 +264,8 @@ body {
     border-bottom: 35px solid transparent; /* Adjust size as needed */
     border-left: 70px solid rgb(255, 255, 255); /* Adjust color and size as needed */
     position: absolute; /* Added for proper positioning */
-    bottom: 545px; /* Adjusted to vertically center the triangle */
-    left: 825px; /* Adjusted to horizontally center the triangle */
+    bottom: 194px;
+    left: 466px;
 }
 
 
