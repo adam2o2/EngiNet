@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap');
+
 /* Remove default margin and padding from html and body */
 html, body {
     margin: 0;
@@ -87,3 +89,118 @@ body {
     margin-left: 80px;
     margin-top: 10px;
 }
+
+.anime-of-the-week {
+    height: 50px;
+    width: 250px;
+    background: #F47521;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin-left: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 100px; /* Adjust the value to control the curvature */
+    font-family: 'Maven Pro', sans-serif; /* Use Maven Pro font */
+    font-size: 11px; /* Adjust the font size as needed */
+    color: white; /* Change the text color to white */
+}
+
+.big-anime {
+    height: 600px;
+    width: 1100px;
+    background: #F47521;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 200px auto; /* Center horizontally and add top margin */
+    margin-bottom: 400px;
+    border-radius: 7px;
+    position: relative; /* Make box-1 a relatively positioned container */
+    overflow: hidden; /* Ensure the gradient doesn't overflow the element */
+    transition: background 0.5s ease; /* Transition for the background */
+}
+
+.big-anime:hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 200%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+    transition: opacity .5s ease;
+    opacity: 1;
+}
+
+.big-anime::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 200%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+    transition: opacity 1s ease;
+    opacity: 0;
+}
+
+.circle-top {
+    width: 100px;
+    height: 100px;
+    background: #00BFFF;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 530px;
+    left: 800px;
+}
+
+.rectangle-top1 {
+    width: 370px;
+    height: 40px;
+    background: #817a76;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 589px;
+    left: 925px;
+}
+
+.rectangle-top2 {
+    width: 200px;
+    height: 35px;
+    background: #cccac9;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 535px;
+    left: 925px;
+}
+
+.triangle-circle {
+    width: 0;
+    height: 0;
+    border-top: 35px solid transparent; /* Adjust size as needed */
+    border-bottom: 35px solid transparent; /* Adjust size as needed */
+    border-left: 70px solid rgb(255, 255, 255); /* Adjust color and size as needed */
+    position: absolute; /* Added for proper positioning */
+    bottom: 545px; /* Adjusted to vertically center the triangle */
+    left: 825px; /* Adjusted to horizontally center the triangle */
+}
+
+
+
+
+
