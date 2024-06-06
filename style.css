@@ -9,6 +9,7 @@ body {
     background-color: black;
     display: flex;
     flex-direction: column;
+    overflow: hidden; /* Prevents scrollbar from appearing */
 }
 
 /* Ensure footer is positioned correctly */
@@ -22,68 +23,135 @@ body {
     background: linear-gradient(to top, #F47521, rgba(244, 117, 33, 0));
 }
 
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end; /* Align items to the bottom */
+}
+
+.box-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute; /* Position for animation */
+    animation: moveUp 2s forwards; /* Animation */
+}
+
+/* Initial positions */
+#group-1 {
+    left: 10%;
+    bottom: 10%;
+}
+
+#group-2 {
+    left: 30%;
+    bottom: 10%;
+}
+
+#group-3 {
+    left: 50%;
+    bottom: 10%;
+}
+
+#group-4 {
+    left: 70%;
+    bottom: 10%;
+}
+
+@keyframes moveUp {
+    to {
+        bottom: 20%;
+    }
+}
+@keyframes moveRectangle-1Up {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-150px); /* Adjust the value to control the movement */
+    }
+}
+@keyframes moveCircleUp {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-100px); /* Adjust the value to control the movement */
+    }
+}
+@keyframes moveRectangle-2Up {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-140px); /* Adjust the value to control the movement */
+    }
+}
+
+.rectangle-1 {
+    width: 100px;
+    height: 20px;
+    background: #817a76;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 70px; /* Adjust spacing as needed */
+    animation: moveRectangleUp 2s forwards; /* Apply the animation */
+}
 
 .box-1 {
-    height: 794.63px;
-    width: 519.59px;
+    height: 397.39px; /* Adjusted for demo purposes */
+    width: 223.59px; /* Adjusted for demo purposes */
     background: linear-gradient(to top, rgba(36, 33, 244, 0),#F47521 );
     border: none;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 400px;
-    margin-left: 10px;
-    position: relative; /* Make box-1 a relatively positioned container */
+}
+.box-1 img {
+    max-width: 110%;
+    max-height: 110%;
+    transition: transform 0.3s ease; /* Add a transition for smooth effect */
 }
 
-.box-2 {
-    width: 50px;
-    height: 50px;
-    background: #817a76;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute; /* Position box-2 absolutely inside box-1 */
-    top: 10px; /* Align to the top of box-1 */
-    right: 10px; /* Align to the right of box-1 */
+.box-1:hover img {
+    transform: scale(1.2); /* Zoom in by 20% */
 }
-
 .circle-1 {
     width: 50px;
     height: 50px;
     background: #00BFFF; /* Example color, change as needed */
     border-radius: 50%; /* Make it a circle */
-    position: absolute; /* Position circle-1 absolutely inside box-1 */
-    margin-left: 10px;
-    margin-top: 10px;
+    margin-right: 90px; /* Adjust spacing as needed */
+    animation: moveCircleUp 2s forwards;
 }
 
-
 .rectangle-1 {
-    width: 370px;
-    height: 30px;
+    width: 100px;
+    height: 20px;
     background: #817a76;
     border: none;
-    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 80px;
-    margin-top: 10px;
+    margin-left: 70px; /* Adjust spacing as needed */
+    animation: moveRectangle-1Up 2s forwards; /* Apply the animation */
 }
 
 .rectangle-2 {
-    width: 200px;
-    height: 30px;
+    width: 80px;
+    height: 20px;
     background: #cccac9;
     border: none;
-    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 80px;
-    margin-top: 10px;
+    margin-left: 50px; /* Adjust spacing as needed */
+    animation: moveRectangle-2Up 2s forwards;
 }
