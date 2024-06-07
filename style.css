@@ -11,6 +11,8 @@ body {
     background-color: black;
     display: flex;
     flex-direction: column;
+    justify-content: space-between; /* Evenly distribute content vertically */
+    min-height: 100vh;
 }
 
 /* Ensure footer is positioned correctly */
@@ -25,102 +27,69 @@ body {
 }
 
 .container {
-    position: absolute;
     width: 100%;
-    height: 100%; /* Set a minimum height equal to the viewport height *//* Align items to the bottom */ /* Adjust the top margin as needed */
-    margin-top: 1200px; /* Adjust the bottom margin to create space below the big-anime */
+    min-height: 100vh; /* Set a minimum height equal to the viewport height */
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+    /* padding-top: 1300px; */ /* Adjust as needed to provide space between sections */
+    display: flex;
+    flex-direction: column;
+    position: relative; /* Add relative positioning */
+    top: 500px;  /* Adjust as needed */
 }
 
+.rectangle-contain {
+    position: relative; /* Add this line */
+    width: 100%;
+    height: 954px;
+    background-color: #F47521; /* Orange background */
+    display: flex;
+    justify-content: space-around; /* Space out the box groups evenly */
+    align-items: center; /* Center the box groups vertically */
+    padding: 20px; /* Add some padding for spacing */
+    box-sizing: border-box;  /* Include padding in the element's total width and height */
+}
+
+/* Box group styles */
 .box-group {
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: absolute; /* Position for animation */
-    animation: moveUp 2s forwards; /* Animation */
+    position: relative; /* Change to relative for positioning */
 }
 
-/* Initial positions */
-#group-1 {
-    left: 10%;
-    bottom: 10%;
+/* Rectangle and box styles */
+
+
+.box-1 {
+    height: 397.39px; /* Adjusted for demo purposes */
+    width: 223.59px; /* Adjusted for demo purposes */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-#group-2 {
-    left: 30%;
-    bottom: 10%;
+.box-1 img {
+    max-width: 100%;
+    max-height: 100%;
+    transition: transform 0.3s ease; /* Add a transition for smooth effect */
+    cursor: pointer;
 }
 
-#group-3 {
-    left: 50%;
-    bottom: 10%;
-}
-
-#group-4 {
-    left: 70%;
-    bottom: 10%;
-}
-
-@keyframes moveUp {
-    to {
-        bottom: 20%;
-    }
-}
-@keyframes moveRectangle-1Up {
-    from {
-        transform: translateY(0);
-    }
-    to {
-        transform: translateY(-150px); /* Adjust the value to control the movement */
-    }
-}
-@keyframes moveCircleUp {
-    from {
-        transform: translateY(0);
-    }
-    to {
-        transform: translateY(-100px); /* Adjust the value to control the movement */
-    }
-}
-@keyframes moveRectangle-2Up {
-    from {
-        transform: translateY(0);
-    }
-    to {
-        transform: translateY(-140px); /* Adjust the value to control the movement */
-    }
+.box-1:hover img {
+    transform: scale(1.2); /* Zoom in by 20% */
 }
 
 .rectangle-1 {
     width: 100px;
     height: 20px;
     background: #817a76;
-    border: none;
-    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-left: 70px; /* Adjust spacing as needed */
-    animation: moveRectangleUp 2s forwards; /* Apply the animation */
-}
-
-.box-1 {
-    height: 397.39px; /* Adjusted for demo purposes */
-    width: 223.59px; /* Adjusted for demo purposes */
-    background: linear-gradient(to top, rgba(36, 33, 244, 0),#F47521 );
-    border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.box-1 img {
-    max-width: 110%;
-    max-height: 110%;
-    transition: transform 0.3s ease; /* Add a transition for smooth effect */
-}
-
-.box-1:hover img {
-    transform: scale(1.2); /* Zoom in by 20% */
+    position: absolute; /* Use absolute positioning */
+    bottom: 60px; /* Adjust as needed */
+    z-index: 2; /* Adjust spacing as needed */
 }
 .circle-1 {
     width: 50px;
@@ -128,122 +97,46 @@ body {
     background: #00BFFF; /* Example color, change as needed */
     border-radius: 50%; /* Make it a circle */
     margin-right: 90px; /* Adjust spacing as needed */
-    animation: moveCircleUp 2s forwards;
-}
-
-.rectangle-1 {
-    width: 100px;
-    height: 20px;
-    background: #817a76;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 70px; /* Adjust spacing as needed */
-    animation: moveRectangle-1Up 2s forwards; /* Apply the animation */
+    position: absolute; /* Use absolute positioning */
+    bottom: 30px; /* Adjust as needed */
+    z-index: 2;  /* Adjust spacing as needed */
 }
 
 .rectangle-2 {
     width: 80px;
     height: 20px;
     background: #cccac9;
-    border: none;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-left: 50px; /* Adjust spacing as needed */
-    animation: moveRectangle-2Up 2s forwards;
+    position: absolute; /* Use absolute positioning */
+    bottom: 30px; /* Adjust as needed */
+    z-index: 2; /* Adjust spacing as needed */
 }
 
-.anime-of-the-week {
-    height: 50px;
-    width: 250px;
-    background: #F47521;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 10px;
-    margin-left: 10px;
+.recommend-text {
     position: absolute;
-    top: 0;
-    left: 0;
-    border-radius: 100px; /* Adjust the value to control the curvature */
-    font-family: 'Maven Pro', sans-serif; /* Use Maven Pro font */
-    font-size: 11px; /* Adjust the font size as needed */
-    color: white; /* Change the text color to white */
-}
-
-.big-anime {
-    height: 600px;
-    width: 1100px;
-    background: linear-gradient(to right, #F47521 50%, rgba(0, 0, 0, 0.7) 80%);
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 200px auto; /* Center horizontally and add top margin */
-    border-radius: 7px;
-    position: relative; /* Make box-1 a relatively positioned container */
-}
-
-.circle-top {
-    width: 100px;
-    height: 100px;
-    background: #00BFFF;
-    border-radius: 50%;
-    position: absolute;
-    bottom: 30px;
-    left: 50px;
-}
-
-.rectangle-top1 {
-    width: 370px;
-    height: 40px;
-    background: #817a76;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    bottom: 90px;
-    left: 177px;
-}
-
-.rectangle-top2 {
-    width: 200px;
-    height: 35px;
-    background: #cccac9;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    bottom: 37px;
-    left: 177px;
-}
-
-.triangle-circle {
-    width: 0;
-    height: 0;
-    border-top: 35px solid transparent; /* Adjust size as needed */
-    border-bottom: 35px solid transparent; /* Adjust size as needed */
-    border-left: 70px solid rgb(255, 255, 255); /* Adjust color and size as needed */
-    position: absolute; /* Added for proper positioning */
-    bottom: 45px;
-    left: 75px;
+    bottom: -90px; /* Position it at the bottom */
+    left: 45%; /* Move it to the center horizontally */
+    transform: translateX(-50%); /* Center it horizontally */
+    font-size: 300px;
+    color: black;
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: bold;
 }
 
 .demon-slayer-container {
     position: relative;
     width: 878px;
     height: 397px;
-    background: linear-gradient(to right, orange, black);
     margin: 0 auto; /* Center the container */
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    top: 10%;
 }
 
 .rectangle-3{
@@ -316,4 +209,94 @@ body {
     width: 400px; /* Set a specific width to see the wrapping effect */
     padding: 10px;
     overflow-wrap: break-word; /* Ensure long words will break and wrap to the next line */
+}
+
+.white-box {
+    background-color: white;
+    padding: 20px;
+    
+  }
+
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Adjust the gap between child elements */
+}
+
+.demon-slayer-container,
+.container,
+.white-box, .container-1, .container-2 {
+    width: 100%; /* Ensure elements take full width */
+    box-sizing: border-box; /* Include padding and borders in the element's total width and height */
+}
+.container-1 {
+    width: 100%;
+    min-height: 100vh; /* Set a minimum height equal to the viewport height */
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+    /* padding-top: 1300px; */ /* Adjust as needed to provide space between sections */
+    display: flex;
+    flex-direction: column;
+    position: relative; /* Add relative positioning */
+    top: 1000px;  /* Adjust as needed */
+}
+
+.rectangle-contain-1 {
+    position: relative; /* Add this line */
+    width: 100%;
+    height: 954px;
+    background-color: black; /* Change the background color to black */
+    display: flex;
+    justify-content: space-around; /* Space out the box groups evenly */
+    align-items: center; /* Center the box groups vertically */
+    padding: 20px; /* Add some padding for spacing */
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+    margin-top: -500px; /* Adjust this value to align with the original container */
+}
+
+.recommend-text-1 {
+    position: absolute;
+    bottom: -90px; /* Position it at the bottom */
+    left: 39.4%; /* Move it to the center horizontally */
+    transform: translateX(-50%); /* Center it horizontally */
+    font-size: 300px;
+    color: #F47521;
+    -webkit-text-stroke: 2px #F47521;
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: bold;
+}
+
+.container-2 {
+    width: 100%;
+    min-height: 100vh; /* Set a minimum height equal to the viewport height */
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+    /* padding-top: 1300px; */ /* Adjust as needed to provide space between sections */
+    display: flex;
+    flex-direction: column;
+    position: relative; /* Add relative positioning */
+    top: 1000px;  /* Adjust as needed */
+}
+
+.rectangle-contain-2 {
+    position: relative; /* Add this line */
+    width: 100%;
+    height: 954px;
+    background-color: #F47521; /* Change the background color to black */
+    display: flex;
+    justify-content: space-around; /* Space out the box groups evenly */
+    align-items: center; /* Center the box groups vertically */
+    padding: 20px; /* Add some padding for spacing */
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+    margin-top: -500px; /* Adjust this value to align with the original container */
+}
+
+.recommend-text-2 {
+    position: absolute;
+    bottom: -90px; /* Position it at the bottom */
+    left: 23.5%; /* Move it to the center horizontally */
+    transform: translateX(-50%); /* Center it horizontally */
+    font-size: 300px;
+    color: black;
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: bold;
 }
