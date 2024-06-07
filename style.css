@@ -178,42 +178,14 @@ body {
 .big-anime {
     height: 600px;
     width: 1100px;
-    background: #F47521;
+    background: linear-gradient(to right, #F47521 50%, rgba(0, 0, 0, 0.7) 80%);
     border: none;
-    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 200px auto; /* Center horizontally and add top margin */
-    margin-bottom: 400px;
     border-radius: 7px;
     position: relative; /* Make box-1 a relatively positioned container */
-    overflow: hidden; /* Ensure the gradient doesn't overflow the element */
-    transition: background 0.5s ease; /* Transition for the background */
-}
-
-.big-anime:hover::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 200%;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
-    transition: opacity .5s ease;
-    opacity: 1;
-}
-
-.big-anime::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 200%;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
-    transition: opacity 1s ease;
-    opacity: 0;
 }
 
 .circle-top {
