@@ -250,8 +250,8 @@ body {
     position: absolute;
     width: 878px;
     height: 397px;
-    background: linear-gradient(to right, orange, black);
-    top: -200px;
+    background: linear-gradient(to right, #F47521 50%, rgba(0, 0, 0, 0.7) 80%);
+    top: -110px;
 }
 
 .demon-slayer-circle {
