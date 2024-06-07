@@ -262,30 +262,41 @@ body {
 }
 
 .blue-circle {
+    position: absolute;
     background-color: blue;
-    top: 20px;
-    left: 20px;
+    top: 40px;
+    left: 260px;
 }
 
 .white-circle {
-    background-color: white;
-    top: 100px;
-    left: 80px;
+    position: absolute;
+    background-color: whitesmoke;
+    bottom: 20px;
+    left: 90px;
 }
 
-.demon-slayer-red-box {
+.demon-slayer-red-box-1 {
     position: absolute;
     width: 192px;
     height: 54px;
     background-color: red;
     bottom: 20px;
+    left: 160px;
+}
+
+.demon-slayer-red-box-2 {
+    position: absolute;
+    width: 192px;
+    height: 54px;
+    background-color: rgb(255, 255, 255);
+    top: 40px;
     left: 50px;
 }
 
 .demon-slayer-text {
     position: absolute;
-    top: 50px;
-    left: 200px;
+    top: 120px;
+    left: 50px;
     color: white;
     font-family: 'Maven Pro', sans-serif;
 }
@@ -299,4 +310,10 @@ body {
     bottom: 0;
     right: -50px;
     height: 397px;
+}
+
+.wrap {
+    width: 400px; /* Set a specific width to see the wrapping effect */
+    padding: 10px;
+    overflow-wrap: break-word; /* Ensure long words will break and wrap to the next line */
 }
