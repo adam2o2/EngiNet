@@ -300,3 +300,13 @@ body {
     font-family: 'Maven Pro', sans-serif;
     font-weight: bold;
 }
+.recommend-text, .recommend-text-1, .recommend-text-2 {
+    position: absolute;
+    left: -100%; /* Start off-screen to the left */
+    transition: left 1s ease-out; /* Adjust the transition duration and easing as needed */
+}
+
+.in-view {
+    left: 50%; /* End at the center */
+    transform: translateX(-50%); /* Center it horizontally */
+}
