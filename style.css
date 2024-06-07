@@ -300,6 +300,7 @@ body {
     font-family: 'Maven Pro', sans-serif;
     font-weight: bold;
 }
+/* this creates the words to move on time*/
 .recommend-text, .recommend-text-1, .recommend-text-2 {
     position: absolute;
     left: -100%; /* Start off-screen to the left */
