@@ -61,15 +61,23 @@ body {
     margin: 0 80px; 
 }
 
-#scroll-button {
+#scroll-button-next,
+#scroll-button-back {
     position: absolute;
     top: 20px;
-    right: 20px;
     padding: 10px 20px;
     background-color: #000;
     color: #fff;
     border: none;
     cursor: pointer;
+}
+
+#scroll-button-next {
+    right: 20px;
+}
+
+#scroll-button-back {
+    left: 20px;
 }
 
 
