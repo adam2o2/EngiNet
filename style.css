@@ -334,14 +334,16 @@ body {
 }
 
 .ribbon {
-    width: 100%;
+    width: calc(100% - 200px); /* Adjust the value to change the width of the ribbon */
     height: 55px;
-    background-color: rgb(39, 39, 39);
-    text-align: left;
+    background-color: rgba(255, 255, 255, 0.281); /* Adjust the alpha value (0.0 to 1.0) */
+    text-align: center;
     line-height: 55px;
-    color: white;
+    color: rgb(0, 0, 0);
     font-weight: bold;
     font-size: 40px;
+    border-radius: 10px;
+    margin: 20px auto 0; /* This centers the ribbon horizontally and adds space above */
 }
 
 .recommend-text-3 {
@@ -357,10 +359,10 @@ body {
 
 .recommend-text-4 {
     position: absolute;
-    bottom: -90px;
+    bottom: -94px;
     right: 0;
-    transform: translateX(-15%);
-    font-size: 250px;
+    transform: translateX(-95%);
+    font-size: 200px;
     color: #F47521;
     font-family: 'Maven Pro', sans-serif;
     font-weight: bold;
