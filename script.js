@@ -45,3 +45,33 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 //This is meant to cycle through the images in the rectangle-contain classes
+
+
+// Wait for the DOM to be fully loaded
+document.addEventListener("DOMContentLoaded", function() {
+    // Get all demon-slayer-container elements
+    const demonSlayerContainers = document.querySelectorAll('.demon-slayer-container');
+
+    // Initialize index for current image
+    let currentIndex = 0;
+
+    // Function to show the current image and schedule the next rotation
+    function rotateImages() {
+        // Hide all demon-slayer-container elements
+        demonSlayerContainers.forEach(container => {
+            container.style.display = 'none';
+        });
+
+        // Show the demon-slayer-container at the current index
+        demonSlayerContainers[currentIndex].style.display = 'block';
+
+        // Increment index for next rotation
+        currentIndex = (currentIndex + 1) % demonSlayerContainers.length;
+
+        // Schedule next rotation after 5 seconds
+        setTimeout(rotateImages, 4000);
+    }
+
+    // Start the rotation
+    rotateImages();
+});
