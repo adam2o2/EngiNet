@@ -22,44 +22,47 @@ document.addEventListener("DOMContentLoaded", function() {
 // this is ment for the words moving to the right
 
 //This is meant to cycle through the images in the rectangle-contain classes using a back and next button
-document.addEventListener('DOMContentLoaded', function () {
-    const slider = document.querySelector('.image-slider');
-    const scrollButtonNext = document.getElementById('scroll-button-next');
-    const scrollButtonBack = document.getElementById('scroll-button-back');
-    
-    scrollButtonNext.addEventListener('click', function () {
-        const firstChild = slider.firstElementChild;
-        const boxWidth = firstChild.offsetWidth + 160; 
-        
-        slider.style.transition = 'transform 0.6s ease-in-out';
-        slider.style.transform = `translateX(-${boxWidth}px)`;
+document.addEventListener("DOMContentLoaded", function () {
+    const containers = document.querySelectorAll('.container, .container-1, .container-2');
 
-        slider.addEventListener('transitionend', function onTransitionEnd() {
+    containers.forEach(container => {
+        const slider = container.querySelector('.image-slider');
+        const scrollButtonNext = container.querySelector('#scroll-button-next');
+        const scrollButtonBack = container.querySelector('#scroll-button-back');
+        
+        scrollButtonNext.addEventListener('click', function () {
+            const firstChild = slider.firstElementChild;
+            const boxWidth = firstChild.offsetWidth + 160;
+
+            slider.style.transition = 'transform 0.6s ease-in-out';
+            slider.style.transform = `translateX(-${boxWidth}px)`;
+
+            slider.addEventListener('transitionend', function onTransitionEnd() {
+                slider.style.transition = 'none';
+                slider.style.transform = 'translateX(0)';
+                slider.appendChild(firstChild);
+                setTimeout(() => {
+                    slider.style.transition = 'transform 0.6s ease-in-out';
+                }, 50);
+                slider.removeEventListener('transitionend', onTransitionEnd);
+            });
+        });
+
+        scrollButtonBack.addEventListener('click', function () {
+            const lastChild = slider.lastElementChild;
+            const boxWidth = lastChild.offsetWidth + 160;
+
             slider.style.transition = 'none';
-            slider.style.transform = 'translateX(0)';
-            slider.appendChild(firstChild);
+            slider.insertBefore(lastChild, slider.firstChild);
+            slider.style.transform = `translateX(-${boxWidth}px)`;
+
             setTimeout(() => {
                 slider.style.transition = 'transform 0.6s ease-in-out';
-            }, 50); 
-            slider.removeEventListener('transitionend', onTransitionEnd);
+                slider.style.transform = 'translateX(0)';
+            }, 50);
         });
     });
-
-    scrollButtonBack.addEventListener('click', function () {
-        const lastChild = slider.lastElementChild;
-        const boxWidth = lastChild.offsetWidth + 160; 
-        
-        slider.style.transition = 'none';
-        slider.insertBefore(lastChild, slider.firstChild);
-        slider.style.transform = `translateX(-${boxWidth}px)`;
-        
-        setTimeout(() => {
-            slider.style.transition = 'transform 0.6s ease-in-out';
-            slider.style.transform = 'translateX(0)';
-        }, 50);
-    });
 });
-
 //This is meant to cycle through the images in the rectangle-contain classes using a back and next button
 
 //This is meant to cycle through the images in the rectangle-contain classes
