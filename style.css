@@ -344,6 +344,8 @@ body {
     font-size: 40px;
     border-radius: 10px;
     margin: 20px auto 0; /* This centers the ribbon horizontally and adds space above */
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: bold;
 }
 
 .recommend-text-3 {
@@ -356,4 +358,15 @@ body {
     font-family: 'Maven Pro', sans-serif;
     font-weight: bold;
     white-space: nowrap;
+}
+
+.recommend-text-4 {
+    position: absolute;
+    bottom: 600px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 300px;
+    color: #F47521;
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: bold;
 }
