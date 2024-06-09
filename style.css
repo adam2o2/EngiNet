@@ -38,27 +38,27 @@ body {
     position: relative;
     width: 100%;
     height: 954px;
-    background-color: #F47521; /* Orange background */
+    background-color: #F47521; 
     overflow: hidden;
     display: flex;
-    justify-content: space-around; /* Space out the box groups evenly */
-    align-items: center; /* Center the box groups vertically */
-    padding: 20px; /* Add some padding for spacing */
-    box-sizing: border-box;  /* Include padding in the element's total width and height */
+    justify-content: space-around; 
+    align-items: center; 
+    padding: 20px; 
+    box-sizing: border-box;  
 }
 
 .image-slider {
     display: flex;
-    transition: transform 0.5s ease-in-out; /* Smooth transition */
+    transition: transform 0.5s ease-in-out; 
 }
 
-/* Box group styles */
+
 .box-group {
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
-    margin: 0 80px; /* Change to relative for positioning */
+    margin: 0 80px; 
 }
 
 #scroll-button {
@@ -71,7 +71,7 @@ body {
     border: none;
     cursor: pointer;
 }
-/* Rectangle and box styles */
+
 
 
 .box-1 {
