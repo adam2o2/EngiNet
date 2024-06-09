@@ -348,17 +348,6 @@ body {
 
 .recommend-text-3 {
     position: absolute;
-    bottom: 650px;
-    left: 29%;
-    transform: translateX(-50%);
-    font-size: 250px;
-    color: #F47521;
-    font-family: 'Maven Pro', sans-serif;
-    font-weight: bold;
-}
-
-.recommend-text-4 {
-    position: absolute;
     bottom: -94px;
     right: 0;
     transform: translateX(-95%);
