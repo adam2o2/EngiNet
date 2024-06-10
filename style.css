@@ -7,7 +7,7 @@ html, body {
 }
 
 body {
-    background-color: black;
+    background-color: #000000;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -156,7 +156,7 @@ body {
     width: 100%; /* Remove fixed width */
     height: 397px;
     margin: 0 auto;
-    margin-left: 30%;
+    margin-left: 25.9%;
     display: flex;
     justify-content: center;
     align-items: center;
