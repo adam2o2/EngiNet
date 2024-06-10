@@ -65,23 +65,71 @@ body {
     margin: 0 80px; 
 }
 
-#scroll-button-next,
-#scroll-button-back {
+#scroll-button-next{
     position: absolute;
-    top: 20px;
-    padding: 10px 20px;
-    background-color: #000;
-    color: #fff;
+    width: 60px; 
+    height: 954px; 
+    background: linear-gradient(to left, black, rgba(244, 117, 33, 0));
+    color: white;
     border: none;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    writing-mode: vertical-rl; 
+    text-orientation: mixed;
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    z-index: 2;
+    overflow: hidden;
+}
+
+
+#scroll-button-back {
+    position: absolute;
+    width: 60px; 
+    height: 954px;
+    background: linear-gradient(to right, black, rgba(244, 117, 33, 0)); 
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.rectangle-contain-1 .scroll-button-next,
+.rectangle-contain-1 .scroll-button-back {
+    background: linear-gradient(to right, black, rgba(244, 117, 33, 0)); 
+}
+
+
+
+#scroll-button-next:hover,
+#scroll-button-back:hover {
+    background-color: rgba(0, 0, 0, 0.9); 
 }
 
 #scroll-button-next {
-    right: 20px;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%); 
 }
 
 #scroll-button-back {
-    left: 20px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 
@@ -153,7 +201,7 @@ body {
 
 .demon-slayer-container {
     position: relative;
-    width: 100%; /* Remove fixed width */
+    width: 100%;
     height: 397px;
     margin: 0 auto;
     margin-left: 25.9%;
@@ -193,8 +241,8 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 70%; /* Adjust the size as needed */
-    height: 70%; /* Adjust the size as needed */
+    width: 70%; 
+    height: 70%; 
 }
 
 .white-circle {
@@ -209,8 +257,8 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 90%; /* Adjust the size as needed */
-    height: 90%; /* Adjust the size as needed */
+    width: 90%; 
+    height: 90%; 
 }
 
 .demon-slayer-red-box-1 {
@@ -377,16 +425,16 @@ body {
 }
 
 .ribbon {
-    width: calc(100% - 200px); /* Adjust the value to change the width of the ribbon */
+    width: calc(100% - 200px); 
     height: 55px;
-    background-color: rgba(255, 255, 255, 0.281); /* Adjust the alpha value (0.0 to 1.0) */
+    background-color: rgba(255, 255, 255, 0.281); 
     text-align: center;
     line-height: 55px;
     color: #F47521;
     font-weight: bold;
     font-size: 40px;
     border-radius: 10px;
-    margin: 20px auto 0; /* This centers the ribbon horizontally and adds space above */
+    margin: 20px auto 0; 
     font-family: 'Maven Pro', sans-serif;
     font-weight: bold;
 }
