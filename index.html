@@ -87,14 +87,12 @@
                 </div>
             </div>
 
-
-            <!-- this hold the other animes -->
             <div class="container">
                 <div class="rectangle-contain">
                     <button id="scroll-button-back">&larr; Back</button>
                     <button id="scroll-button-next">Next &rarr;</button>
                     <div class="image-slider">
-                        <div class="box-group" id="group-1">
+                        <div class="box-group" id="group-1">  
                             <div class="box-1">
                                 <img src="Bleach.png" alt="Bleach Image">
                             </div>
@@ -132,9 +130,17 @@
                             
                         </div>
                     </div>
-                        <div class="recommend-text">Shonen</div>
-                    
+                        <div class="recommend-text">Shonen</div>   
                 </div>
+                      <!-- Add this new section for anime details (include below the existing boxes) -->
+                       <!-- In order for all boxes to work correctly need to rename group-1 thorugh group-6 -->
+                        <div id="anime-details" style="display:none;">
+                            <div class="anime-trailer">
+                                <iframe width="1080" height="615" src="https://www.youtube.com/embed/1sygUhb8Q2Y" frameborder="0" allowfullscreen></iframe>
+                                <button onclick="window.location.href='https://www.crunchyroll.com/'">Crunchyroll button</button>
+                                <button class="back-button" onclick="goBack()">&larr; Back</button>
+                            </div>
+                        </div>
             </div> 
 
                         <!-- Duplicate of the container -->

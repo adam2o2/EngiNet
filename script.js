@@ -68,32 +68,58 @@ document.addEventListener("DOMContentLoaded", function () {
 //This is meant to cycle through the images in the rectangle-contain classes
 
 
-// Wait for the DOM to be fully loaded
+// cycles through the anime description up top
 document.addEventListener("DOMContentLoaded", function() {
-    // Get all demon-slayer-container elements
     const demonSlayerContainers = document.querySelectorAll('.demon-slayer-container');
 
-    // Initialize index for current image
     let currentIndex = 0;
 
-    // Function to show the current image and schedule the next rotation
     function rotateImages() {
-        // Hide all demon-slayer-container elements
         demonSlayerContainers.forEach(container => {
             container.style.display = 'none';
         });
 
-        // Show the demon-slayer-container at the current index
         demonSlayerContainers[currentIndex].style.display = 'block';
 
-        // Increment index for next rotation
         currentIndex = (currentIndex + 1) % demonSlayerContainers.length;
 
-        // Schedule next rotation after 5 seconds
         setTimeout(rotateImages, 4000);
     }
 
-    // Start the rotation
     rotateImages();
 });
+// cycles through the anime description up top
 
+// creates the click for each box
+document.addEventListener('DOMContentLoaded', function() {
+
+    document.getElementById('group-1').addEventListener('click', function() {
+      showAnimeDetails();
+    });
+    document.getElementById('group-2').addEventListener('click', function() {
+      showAnimeDetails();
+    });
+    document.getElementById('group-3').addEventListener('click', function() {
+      showAnimeDetails();
+    });
+    document.getElementById('group-4').addEventListener('click', function() {
+      showAnimeDetails();
+    });
+    document.getElementById('group-5').addEventListener('click', function() {
+      showAnimeDetails();
+    });
+    document.getElementById('group-6').addEventListener('click', function() {
+      showAnimeDetails();
+    });
+    
+  });
+  
+  function showAnimeDetails() {
+    document.getElementById('anime-details').style.display = 'block';
+    window.scrollTo(0, document.getElementById('anime-details').offsetTop);
+  }
+  
+  function goBack() {
+    document.getElementById('anime-details').style.display = 'none';
+}
+// creates the click for each box
