@@ -134,62 +134,62 @@
                 </div>
                       <!-- Add this new section for anime details (include below the existing boxes) -->
                        <!-- In order for all boxes to work correctly need to rename group-1 thorugh group-6 -->
-                        <div id="anime-details" style="display:none;">
-                            <div class="anime-trailer">
-                                <iframe width="1080" height="615" src="https://www.youtube.com/embed/1sygUhb8Q2Y" frameborder="0" allowfullscreen></iframe>
-                                <button onclick="window.location.href='https://www.crunchyroll.com/'">Crunchyroll button</button>
-                                <button class="back-button" onclick="goBack()">&larr; Back</button>
-                            </div>
+                       <div id="anime-details" style="display:none;">
+                        <div class="anime-trailer">
+                            <iframe width="1080" height="615" src="https://www.youtube.com/embed/1sygUhb8Q2Y" frameborder="0" allowfullscreen></iframe>
+                            <button onclick="window.location.href='https://www.crunchyroll.com/'">Crunchyroll button</button>
+                            <button class="back-button" onclick="goBack('anime-details')">&larr; Back</button>
                         </div>
+                    </div>
             </div> 
 
-                        <!-- Duplicate of the container -->
-                <div class="container-1">
-                    <div class="rectangle-contain-1">
-                        <button id="scroll-button-back">&larr; Back</button>
-                        <button id="scroll-button-next">Next &rarr;</button>
-                        <div class="image-slider">
-                            <div class="box-group" id="group-1">
-                                <div class="box-1">
-                                    <img src="Bleach.png" alt="Bleach Image">
+                        <!-- changed all group to section -->
+                        <div class="container-1">
+                            <div class="rectangle-contain-1">
+                                <button id="scroll-button-back">&larr; Back</button>
+                                <button id="scroll-button-next">Next &rarr;</button>
+                                <div class="image-slider">
+                                    <div class="box-group" id="group-1">
+                                        <div class="box-1">
+                                            <img src="Bleach.png" alt="Bleach Image">
+                                        </div>
+                                    </div>
+                                    <div class="box-group" id="group-2">
+                                        <div class="box-1">
+                                            <img src="Dungeon.png" alt="Dungeon Image">
+                                        </div>
+                                    </div>
+                                    <div class="box-group" id="group-3">
+                                        <div class="box-1">
+                                            <img src="Mushoku.png" alt="Mushoku Image">
+                                        </div>
+                                    </div>
+                                    <div class="box-group" id="group-4">
+                                        <div class="box-1">
+                                            <img src="OnePiece.png" alt="OnePiece Image">
+                                        </div>
+                                    </div>
+                                    <div class="box-group" id="group-5">
+                                        <div class="box-1">
+                                            <img src="DemonSlayer.png" alt="DemonSlayer Image">
+                                        </div>
+                                    </div>
+                                    <div class="box-group" id="group-6">
+                                        <div class="box-1">
+                                            <img src="MHA.png" alt="MHA Image">
+                                        </div>
+                                    </div>
                                 </div>
-
+                                <div class="recommend-text-1">Adventure</div>
                             </div>
-        
-                            <div class="box-group" id="group-2">
-                                <div class="box-1">
-                                    <img src="Dungeon.png" alt="Dungeon Image">
+                            <div id="anime-details-1" style="display:none;">
+                                <div class="anime-trailer-1">
+                                    <iframe width="1080" height="615" src="https://www.youtube.com/embed/1sygUhb8Q2Y" frameborder="0" allowfullscreen></iframe>
+                                    <button onclick="window.location.href='https://www.crunchyroll.com/'">Crunchyroll button</button>
+                                    <button class="back-button" onclick="goBack('anime-details-1')">&larr; Back</button>
                                 </div>
-
                             </div>
-                            <div class="box-group" id="group-3">
-                                <div class="box-1">
-                                    <img src="Mushoku.png" alt="Mushoku Image">
-                                </div>
-
-                            </div>
-                            <div class="box-group" id="group-4">
-                                <div class="box-1">
-                                    <img src="OnePiece.png" alt="OnePiece Image">
-                                </div>
-
-                            </div>
-                            <div class="box-group" id="group-5">
-                                <div class="box-1">
-                                    <img src="DemonSlayer.png" alt="Bleach Image">
-                                </div>
-
-                            </div>
-                            <div class="box-group" id="group-6">
-                                <div class="box-1">
-                                    <img src="MHA.png" alt="Bleach Image">
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="recommend-text-1">Adventure</div>
-                    </div>
-                </div> 
+                        </div>                       
 
             <div class="container-2">
                 <div class="rectangle-contain-2">
@@ -235,6 +235,13 @@
                     </div>
                 </div>
                     <div class="recommend-text-2">Action</div>
+                </div>
+                <div id="anime-details-2" style="display:none;">
+                    <div class="anime-trailer-2">
+                        <iframe width="1080" height="615" src="https://www.youtube.com/embed/1sygUhb8Q2Y" frameborder="0" allowfullscreen></iframe>
+                        <button onclick="window.location.href='https://www.crunchyroll.com/'">Crunchyroll button</button>
+                        <button class="back-button" onclick="goBack('anime-details-2')">&larr; Back</button>
+                    </div>
                 </div>
             </div>
 

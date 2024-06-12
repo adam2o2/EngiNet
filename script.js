@@ -90,36 +90,29 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 // cycles through the anime description up top
 
-// creates the click for each box
+// creates the anime trailer click to the desire location
 document.addEventListener('DOMContentLoaded', function() {
-
-    document.getElementById('group-1').addEventListener('click', function() {
-      showAnimeDetails();
-    });
-    document.getElementById('group-2').addEventListener('click', function() {
-      showAnimeDetails();
-    });
-    document.getElementById('group-3').addEventListener('click', function() {
-      showAnimeDetails();
-    });
-    document.getElementById('group-4').addEventListener('click', function() {
-      showAnimeDetails();
-    });
-    document.getElementById('group-5').addEventListener('click', function() {
-      showAnimeDetails();
-    });
-    document.getElementById('group-6').addEventListener('click', function() {
-      showAnimeDetails();
-    });
-    
+  const containers = document.querySelectorAll('.container, .container-1, .container-2');
+  containers.forEach((container, index) => {
+      const sections = container.querySelectorAll('.box-group');
+      sections.forEach(section => {
+          section.addEventListener('click', function() {
+              showAnimeDetails(index === 0 ? 'anime-details' : index === 1 ? 'anime-details-1' : 'anime-details-2');
+          });
+      });
   });
-  
-  function showAnimeDetails() {
-    document.getElementById('anime-details').style.display = 'block';
-    window.scrollTo(0, document.getElementById('anime-details').offsetTop);
-  }
-  
-  function goBack() {
-    document.getElementById('anime-details').style.display = 'none';
+});
+
+function showAnimeDetails(detailsId) {
+  const detailsElement = document.getElementById(detailsId);
+  detailsElement.style.display = 'block';
+
+  const targetElement = detailsElement.querySelector('.anime-trailer, .anime-trailer-1, .anime-trailer-2');
+
+  targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
-// creates the click for each box
+
+function goBack(detailsId) {
+  document.getElementById(detailsId).style.display = 'none';
+}
+// creates the anime trailer click to the desire location
