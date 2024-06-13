@@ -148,16 +148,16 @@ body {
     position: absolute;
     top: -10%;
     left: -10%;
-    width: 268.308px; /* Adjusted width to match the transformed image */
-    height: 476.868px; /* Cover the entire height of the container */
-    background-color: rgba(0, 0, 0, 0); /* Initially transparent */
+    width: 268.308px;
+    height: 476.868px; 
+    background-color: rgba(0, 0, 0, 0); 
     transition: background-color 0.3s ease;
     z-index: 1;
 }
 
-/* Change the background color of the container when hovering over the image */
+
 .box-1:hover::before {
-    background-color: rgba(0, 0, 0, 0.6); /* Change to desired color on hover */
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 .box-1 img {
