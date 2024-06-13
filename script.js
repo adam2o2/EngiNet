@@ -92,27 +92,40 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // creates the anime trailer click to the desire location
 document.addEventListener('DOMContentLoaded', function() {
-  const containers = document.querySelectorAll('.container, .container-1, .container-2');
-  containers.forEach((container, index) => {
-      const sections = container.querySelectorAll('.box-group');
-      sections.forEach(section => {
-          section.addEventListener('click', function() {
-              showAnimeDetails(index === 0 ? 'anime-details' : index === 1 ? 'anime-details-1' : 'anime-details-2');
-          });
-      });
-  });
+    const containers = document.querySelectorAll('.container, .container-1, .container-2');
+    containers.forEach((container, index) => {
+        const sections = container.querySelectorAll('.box-group');
+        sections.forEach(section => {
+            section.addEventListener('click', function() {
+                showAnimeDetails(index === 0 ? 'anime-details' : index === 1 ? 'anime-details-1' : 'anime-details-2');
+            });
+        });
+    });
 });
 
 function showAnimeDetails(detailsId) {
-  const detailsElement = document.getElementById(detailsId);
-  detailsElement.style.display = 'block';
+    const detailsElement = document.getElementById(detailsId);
+    detailsElement.style.display = 'block';
 
-  const targetElement = detailsElement.querySelector('.anime-trailer, .anime-trailer-1, .anime-trailer-2');
+    // Add the autoplay parameter to the iframe src
+    const iframe = detailsElement.querySelector('iframe');
+    const src = iframe.src;
+    if (!src.includes('autoplay=1')) {
+        iframe.src = src.includes('?') ? `${src}&autoplay=1` : `${src}?autoplay=1`;
+    }
 
-  targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    const targetElement = detailsElement.querySelector('.anime-trailer, .anime-trailer-1, .anime-trailer-2');
+    targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 function goBack(detailsId) {
-  document.getElementById(detailsId).style.display = 'none';
+    const detailsElement = document.getElementById(detailsId);
+    const iframe = detailsElement.querySelector('iframe');
+    
+    // Stop the video by removing the autoplay parameter
+    iframe.src = iframe.src.replace('&autoplay=1', '').replace('?autoplay=1', '');
+    
+    detailsElement.style.display = 'none';
 }
+
 // creates the anime trailer click to the desire location
