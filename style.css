@@ -530,8 +530,8 @@ body {
 
 .anime-trailer button.back-button {
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 125px;
+    left: 1395px;
     background-color: rgba(0, 0, 0, 0.7); 
     padding: 10px;
     border-radius: 5px;
@@ -579,8 +579,8 @@ body {
 
 .anime-trailer-1 button.back-button {
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 125px;
+    left: 1395px;
     background-color: rgba(0, 0, 0, 0.7); 
     padding: 10px;
     border-radius: 5px;
@@ -628,8 +628,8 @@ body {
 
 .anime-trailer-2 button.back-button {
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 125px;
+    left: 1395px;
     background-color: rgba(0, 0, 0, 0.7); 
     padding: 10px;
     border-radius: 5px;
