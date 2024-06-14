@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // cycles through the anime description up top
 document.addEventListener("DOMContentLoaded", function() {
-    const demonSlayerContainers = document.querySelectorAll('.demon-slayer-container');
+    const demonSlayerContainers = document.querySelectorAll('.character-container');
 
     let currentIndex = 0;
 

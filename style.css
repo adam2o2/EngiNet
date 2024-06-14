@@ -219,7 +219,7 @@ body {
     font-weight: bold;
 }
 
-.demon-slayer-container {
+.character-container {
     position: relative;
     width: 100%;
     height: 397px;
@@ -242,14 +242,14 @@ body {
     border-radius: 50px;
 }
 
-.demon-slayer-circle {
+.circle-1 {
     position: absolute;
     width: 52px;
     height: 51px;
     border-radius: 50%;
 }
 
-.blue-circle {
+.circle {
     position: absolute;
     background-color: black;
     top: 40px;
@@ -267,7 +267,7 @@ body {
     height: 70%; 
 }
 
-.white-circle {
+.circle-2 {
     position: absolute;
     background-color: black;
     bottom: 20px;
@@ -285,7 +285,7 @@ body {
     height: 90%; 
 }
 
-.demon-slayer-red-box-1 {
+.review-box {
     position: absolute;
     width: 192px;
     height: 54px;
@@ -302,11 +302,11 @@ body {
     border-radius: 50px;
 }
 
-.demon-slayer-red-box-1 i {
+.review-box i {
     margin-right: 10px; 
 }
 
-.demon-slayer-red-box-2 {
+.popular-box {
     position: absolute;
     width: 192px;
     height: 54px;
@@ -323,11 +323,11 @@ body {
     border-radius: 50px;
 }
 
-.demon-slayer-red-box-2 i {
+.popular-box i {
     margin-right: 10px; 
 }
 
-.demon-slayer-text {
+.character-card-text {
     position: absolute;
     top: 120px;
     left: 50px;
@@ -335,11 +335,11 @@ body {
     font-family: 'Maven Pro', sans-serif;
 }
 
-.demon-slayer-text h1 {
+.character-card-text h1 {
     margin: 0;
 }
 
-.demon-slayer-character {
+.character-card {
     position: absolute;
     bottom: 0;
     right: -40px;
@@ -362,9 +362,10 @@ body {
     flex-direction: column;
 }
 
-.demon-slayer-container,
-.container,
-.white-box, .container-1, .container-2 {
+.character-container,
+.container, 
+.container-1, 
+.container-2 {
     width: 100%;
     box-sizing: border-box;
 }
