@@ -238,7 +238,7 @@ body {
     width: 878px;
     height: 397px;
     background: linear-gradient(to right, #F47521 50%, rgba(0, 0, 0, 0.7) 70%);
-    top: -110px;
+    top: -125%;
     border-radius: 50px;
 }
 
@@ -365,7 +365,11 @@ body {
 .character-container,
 .container, 
 .container-1, 
-.container-2 {
+.container-2,
+.container-3,
+.container-4,
+.container-5,
+.container-6 {
     width: 100%;
     box-sizing: border-box;
 }
@@ -440,8 +444,151 @@ body {
     font-family: 'Maven Pro', sans-serif;
     font-weight: bold;
 }
+.container-3 {
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 1000px;
+}
 
-.recommend-text, .recommend-text-1, .recommend-text-2, .recommend-text-3, .recommend-text-4 {
+.rectangle-contain-3 {
+    position: relative;
+    width: 100%;
+    height: 954px;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: -500px;
+    background-image: 
+        linear-gradient(to right, #333 1px, transparent 1px), 
+        linear-gradient(to bottom, #333 1px, transparent 1px);
+    background-size: 150px 150px; 
+}
+
+.recommend-text-3 {
+    position: absolute;
+    bottom: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 300px;
+    color: #F47521;
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: bold;
+}
+
+.container-4 {
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 1000px;
+}
+
+.rectangle-contain-4 {
+    position: relative;
+    width: 100%;
+    height: 954px;
+    background-color: #F47521;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: -500px;
+}
+
+.recommend-text-4 {
+    position: absolute;
+    bottom: -70px;
+    left: 23.5%;
+    transform: translateX(-50%);
+    font-size: 300px;
+    color: black;
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: bold;
+}
+
+.container-5 {
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 1000px;
+}
+
+.rectangle-contain-5 {
+    position: relative;
+    width: 100%;
+    height: 954px;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: -500px;
+    background-image: 
+        linear-gradient(to right, #333 1px, transparent 1px), 
+        linear-gradient(to bottom, #333 1px, transparent 1px);
+    background-size: 150px 150px; 
+}
+
+.recommend-text-5 {
+    position: absolute;
+    bottom: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 300px;
+    color: #F47521;
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: bold;
+}
+
+.container-6 {
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 1000px;
+}
+
+.rectangle-contain-6 {
+    position: relative;
+    width: 100%;
+    height: 954px;
+    background-color: #F47521;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: -500px;
+}
+
+.recommend-text-6 {
+    position: absolute;
+    bottom: -70px;
+    left: 23.5%;
+    transform: translateX(-50%);
+    font-size: 300px;
+    color: black;
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: bold;
+}
+
+.recommend-text, .recommend-text-1, .recommend-text-2, .recommend-text-head, .recommend-text-3, .recommend-text-4, .recommend-text-5, .recommend-text-6 {
     position: absolute;
     left: -100%;
     transition: left 1s ease-out;
@@ -504,7 +651,7 @@ body {
     margin-left: 20px; 
 }
 
-.recommend-text-3 {
+.recommend-text-head {
     position: absolute;
     bottom: -70px;
     right: 0;
@@ -516,16 +663,7 @@ body {
     white-space: nowrap;
 }
 
-.recommend-text-4 {
-    position: absolute;
-    bottom: 600px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 300px;
-    color: #F47521;
-    font-family: 'Maven Pro', sans-serif;
-    font-weight: bold;
-}
+
 
 /* Anime Trailer Styles */
 .anime-trailer {
@@ -718,6 +856,202 @@ body {
 }
 
 .anime-trailer-2 button:hover {
+    background-color: #F47521; 
+}
+.anime-trailer-3 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -500px;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10; 
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.anime-trailer-3 iframe {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.anime-trailer-3 button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-family: 'Maven Pro', sans-serif;
+    color: #fff;
+    background-color: #F47521;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.anime-trailer-3 button.back-button {
+    position: absolute;
+    top: 125px;
+    left: 1395px;
+    background-color: rgba(0, 0, 0, 0.7); 
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    z-index: 20; 
+    font-weight: bold;
+}
+
+.anime-trailer-3 button:hover {
+    background-color: #F47521; 
+}
+.anime-trailer-4 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -500px;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10; 
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.anime-trailer-4 iframe {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.anime-trailer-4 button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-family: 'Maven Pro', sans-serif;
+    color: #fff;
+    background-color: #F47521;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.anime-trailer-4 button.back-button {
+    position: absolute;
+    top: 125px;
+    left: 1395px;
+    background-color: rgba(0, 0, 0, 0.7); 
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    z-index: 20; 
+    font-weight: bold;
+}
+
+.anime-trailer-4 button:hover {
+    background-color: #F47521; 
+}
+.anime-trailer-5 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -500px;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10; 
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.anime-trailer-5 iframe {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.anime-trailer-5 button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-family: 'Maven Pro', sans-serif;
+    color: #fff;
+    background-color: #F47521;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.anime-trailer-5 button.back-button {
+    position: absolute;
+    top: 125px;
+    left: 1395px;
+    background-color: rgba(0, 0, 0, 0.7); 
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    z-index: 20; 
+    font-weight: bold;
+}
+
+.anime-trailer-5 button:hover {
+    background-color: #F47521; 
+}
+.anime-trailer-6 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -500px;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10; 
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.anime-trailer-6 iframe {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.anime-trailer-6 button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-family: 'Maven Pro', sans-serif;
+    color: #fff;
+    background-color: #F47521;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.anime-trailer-6 button.back-button {
+    position: absolute;
+    top: 125px;
+    left: 1395px;
+    background-color: rgba(0, 0, 0, 0.7); 
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    z-index: 20; 
+    font-weight: bold;
+}
+
+.anime-trailer-6 button:hover {
     background-color: #F47521; 
 }
 /* Anime Trailer Styles */
