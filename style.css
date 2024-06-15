@@ -513,6 +513,8 @@ body {
 .anime-trailer iframe {
     max-width: 100%;
     border-radius: 10px;
+    z-index: 1; /* Ensure the iframe is below the video box */
+    position: relative; /* Ensure z-index is applied */
 }
 
 .anime-trailer button {
@@ -530,8 +532,8 @@ body {
 
 .anime-trailer button.back-button {
     position: absolute;
-    top: 125px;
-    left: 1395px;
+    top: 10px;
+    left: 300px;
     background-color: rgba(0, 0, 0, 0.7); 
     padding: 10px;
     border-radius: 5px;
@@ -543,6 +545,49 @@ body {
 .anime-trailer button:hover {
     background-color: #F47521; 
 }
+
+.video-box {
+    background-image: linear-gradient(to right, transparent 10%,#222 35%);
+    border-radius: 10px;
+    width: 400px; /* Original width of 1080px + 320px */
+    height: 615px; 
+    display: flex;
+    justify-content: flex-start; /* Ensure iframe stays at the start (left) */
+    align-items: center;
+    padding-left: 0;
+    padding-right: 50px;
+    box-sizing: border-box; 
+    position: absolute; /* Ensure it can overlay the iframe */
+    z-index: 20; 
+    left: calc(50% + 400px); /* Ensure the video box is above the iframe */
+}
+
+.video-box iframe {
+    border-radius: 10px;
+    width: 1080px; /* Match original iframe width */
+    height: 615px; /* Match original iframe height */
+    z-index: 1; /* Ensure iframe is below the video box */
+    position: relative; /* Ensure z-index is applied */
+}
+
+.crunchyroll-button {
+    position: absolute;
+    bottom: 20px; /* Adjust top position as needed */
+    right: 20px; /* Adjust right position as needed */
+    padding: 10px 20px;
+    font-size: 18px;
+    font-family: 'Maven Pro', sans-serif;
+    color: #fff;
+    background-color: #F47521;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+
+
+
 .anime-trailer-1 {
     position: absolute;
     width: 100%;
