@@ -704,18 +704,20 @@ body {
 
 .anime-trailer button.back-button {
     position: absolute;
-    top: 10px;
-    left: 300px;
-    background-color: rgba(0, 0, 0, 0.7); 
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 20px;
-    z-index: 20; 
-    font-weight: bold;
+    top: -20px;
+    left: 0;
+    width: 100vw; 
+    height: 100vh;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 16px;
+    text-align: center;
 }
 
 .anime-trailer button:hover {
-    background-color: #F47521; 
+    background-image:transparent 10%; 
 }
 
 .video-box {
@@ -796,19 +798,23 @@ body {
 
 .anime-trailer-1 button.back-button {
     position: absolute;
-    top: 125px;
-    left: 1395px;
-    background-color: rgba(0, 0, 0, 0.7); 
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 20px;
-    z-index: 20; 
-    font-weight: bold;
+    top: -20px;
+    left: 0;
+    width: 100vw; 
+    height: 100vh;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 16px;
+    text-align: center;
+    z-index: -1;
 }
 
 .anime-trailer-1 button:hover {
-    background-color: #F47521; 
+    background-image:transparent 10%; 
 }
+
 .anime-trailer-2 {
     position: absolute;
     width: 100%;
@@ -845,18 +851,21 @@ body {
 
 .anime-trailer-2 button.back-button {
     position: absolute;
-    top: 125px;
-    left: 1395px;
-    background-color: rgba(0, 0, 0, 0.7); 
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 20px;
-    z-index: 20; 
-    font-weight: bold;
+    top: -20px;
+    left: 0;
+    width: 100vw; 
+    height: 100vh;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 16px;
+    text-align: center;
+    z-index: -1;
 }
 
 .anime-trailer-2 button:hover {
-    background-color: #F47521; 
+    background-image:transparent 10%; 
 }
 .anime-trailer-3 {
     position: absolute;
