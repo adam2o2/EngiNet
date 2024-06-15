@@ -1,6 +1,6 @@
-//this is ment for the words moving to the right
+//this is meant for the words moving to the right
 document.addEventListener("DOMContentLoaded", function() {
-    const recommendTexts = document.querySelectorAll('.recommend-text, .recommend-text-1, .recommend-text-2, .recommend-text-3, .recommend-text-4');
+    const recommendTexts = document.querySelectorAll('.recommend-text, .recommend-text-1, .recommend-text-2, .recommend-text-head, .recommend-text-3, .recommend-text-4, .recommend-text-5, .recommend-text-6');
 
     function checkPosition() {
         const triggerBottom = window.innerHeight / 5 * 4;
@@ -19,11 +19,11 @@ document.addEventListener("DOMContentLoaded", function() {
     window.addEventListener('scroll', checkPosition);
     checkPosition(); 
 });
-// this is ment for the words moving to the right
+// this is meant for the words moving to the right
 
 //This is meant to cycle through the images in the rectangle-contain classes using a back and next button
 document.addEventListener("DOMContentLoaded", function () {
-    const containers = document.querySelectorAll('.container, .container-1, .container-2');
+    const containers = document.querySelectorAll('.container, .container-1, .container-2, .container-3, .container-4, .container-5, .container-6');
 
     containers.forEach(container => {
         const slider = container.querySelector('.image-slider');
@@ -92,12 +92,21 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // creates the anime trailer click to the desire location
 document.addEventListener('DOMContentLoaded', function() {
-    const containers = document.querySelectorAll('.container, .container-1, .container-2');
+    const containers = document.querySelectorAll('.container, .container-1, .container-2, .container-3, .container-4, .container-5, .container-6');
     containers.forEach((container, index) => {
         const sections = container.querySelectorAll('.box-group');
         sections.forEach(section => {
             section.addEventListener('click', function() {
-                showAnimeDetails(index === 0 ? 'anime-details' : index === 1 ? 'anime-details-1' : 'anime-details-2');
+                showAnimeDetails(
+                    index === 0 ? 'anime-details' :
+                    index === 1 ? 'anime-details-1' :
+                    index === 2 ? 'anime-details-2' :
+                    index === 3 ? 'anime-details-3' :
+                    index === 4 ? 'anime-details-4' :
+                    index === 5 ? 'anime-details-5' :
+                    'anime-details-6'
+                  );
+                  
             });
         });
     });
@@ -114,7 +123,7 @@ function showAnimeDetails(detailsId) {
         iframe.src = src.includes('?') ? `${src}&autoplay=1` : `${src}?autoplay=1`;
     }
 
-    const targetElement = detailsElement.querySelector('.anime-trailer, .anime-trailer-1, .anime-trailer-2');
+    const targetElement = detailsElement.querySelector('.anime-trailer, .anime-trailer-1, .anime-trailer-2, .anime-trailer-3, .anime-trailer-4, .anime-trailer-5, .anime-trailer-6');
     targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
