@@ -464,11 +464,44 @@ body {
     color: #F47521;
     font-weight: bold;
     font-size: 40px;
-    border-radius: 10px;
+    border-radius: 30px;
     margin: 20px auto 0;
-    margin: 20px auto 0; 
     font-family: 'Maven Pro', sans-serif;
     font-weight: bold;
+}
+
+.ribbon span:hover {
+    background-color: #272626; 
+}
+
+.ribbon span:nth-child(1) {
+    margin-left: 20px; 
+}
+
+.ribbon span:nth-child(2),
+.ribbon span:nth-child(3),
+.ribbon span:nth-child(4) {
+    font-size: 20px;
+    padding: 16px 20px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease; 
+    position: relative;
+    top: -8px; 
+}
+
+.ribbon span:nth-child(2) {
+    margin-left: 30%; 
+}
+
+.ribbon span:nth-child(3) {
+    margin-left: 20px; 
+}
+
+.ribbon span:nth-child(4) {
+    margin-left: 20px; 
 }
 
 .recommend-text-3 {
@@ -493,6 +526,7 @@ body {
     font-family: 'Maven Pro', sans-serif;
     font-weight: bold;
 }
+
 /* Anime Trailer Styles */
 .anime-trailer {
     position: absolute;
