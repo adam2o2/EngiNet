@@ -799,26 +799,27 @@ body {
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
+    z-index: 20;
   }
 
   .anime-info {
     position: absolute;
-    height: 200px;
+    height: 595px;
     width: 250px;
-    top: 10px;
-    right: 10px;
-    background: rgba(0, 0, 0, 0.7);
+    top: 0px;
+    right: 0px;
+    background-image: linear-gradient(to right, transparent 10%,rgba(0, 0, 0, 0.7) 35%);
     color: white;
     padding: 10px;
     border-radius: 5px;
-    z-index: 22;
+    z-index: 1;
     font-family: 'Maven Pro', sans-serif;
 }
 
 .found-like {
     position: absolute;
     bottom: 90px;
-    right: 45px;
+    right: 39px;
     background: rgba(0, 0, 0, 0.7);
     color: white;
     padding: 10px;
