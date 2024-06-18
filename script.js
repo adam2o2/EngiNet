@@ -139,6 +139,28 @@ function goBack(detailsId) {
 
 // creates the anime trailer click to the desire location
 
+
+//scroll up arrow
+// Show the scroll-to-top button when user scrolls down
+window.addEventListener('scroll', function() {
+    const scrollToTopButton = document.getElementById('scroll-to-top');
+    if (window.scrollY > 300) {
+        scrollToTopButton.style.display = 'block';
+    } else {
+        scrollToTopButton.style.display = 'none';
+    }
+});
+
+// Scroll to the top when the button is clicked
+document.getElementById('scroll-to-top').addEventListener('click', function() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
+//scroll up arrow
+
 document.addEventListener("DOMContentLoaded", function() {
     var modal = document.getElementById("aboutModal");
     var btn = document.getElementById("aboutButton");
@@ -178,3 +200,4 @@ document.addEventListener("DOMContentLoaded", function() {
         window.scrollTo({ top: scrollPosition, behavior: 'smooth' });
     });
 });
+
