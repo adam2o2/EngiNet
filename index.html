@@ -15,9 +15,20 @@
     <div class="header">
         <div class="ribbon">
             <span>Rolled</span>
-            <span>About</span>
+            <span id="aboutButton">About</span>
             <span>Discover</span>
-            <span>Developers</span>
+            <span id="developerButton">Developers</span> <!-- Added id developerButton here -->
+        </div>
+    </div>
+
+    <div id="aboutModal" class="modal">
+        <div class="modal-content">
+            <span class="close"></span>
+            <h2>About</h2>
+            <p><span class="highlight">Rolled</span> is an anime-based website that recommends anime 
+                across all genres. It was created to enhance the experience in discovering new anime 
+                to watch on CrunchyRoll.</p>
+             
         </div>
     </div>
     <div class="recommend-text-head">Anime of the week</div>
@@ -64,7 +75,7 @@
                     <div class="character-card-text">
                         <h1>Kaiju No. 8</h1>
                         <p class="wrap">In a world plagued by creatures known as Kaiju, Kafka Hibino aspired to enlist in The Defense Force. 
-                            He makes a promise to enlist with his childhood friend, Mina Ashiro. Soon, life takes them in separate ways.</p>
+                            He makes a promise to enlist with his childhood friend, Mina Ashiro. Soon, life takes them in separate ways</p>
                     </div>
                 </div>
             </div>
@@ -146,7 +157,7 @@
                         <div class="video-box">
                             <button class="crunchyroll-button" onclick="window.location.href='https://www.crunchyroll.com/'">Crunchyroll button</button>
                             <div class="anime-info">
-                                Genre: <span>Shounen, Action, Adventure, Comedy, Romance</span>
+                                Genre: <span>Shounen, Action, Adventure, Comedy, Romance</span><br>
                                 <br>
                                 Author: <span>Hiro Mashima</span><br>
                                 <br>
@@ -156,7 +167,7 @@
                                 <br>
                                 Studio: <span>A-1 Pictures, Dentsu Inc., Satelight, Bridge, CloverWorks</span><br>
                             </div>
-                            <div class="found-like">Found what you like</div>
+                            <div class="found-like">Found what you like?</div>
                         </div>
                     </div>
                 </div>
@@ -209,7 +220,7 @@
                                     <div class="video-box">
                                         <button class="crunchyroll-button" onclick="window.location.href='https://www.crunchyroll.com/'">Crunchyroll button</button>
                                         <div class="anime-info">
-                                            Genre: <span>Shounen, Action, Adventure, Comedy, Romance</span>
+                                            Genre: <span>Shounen, Action, Adventure, Comedy, Romance</span><br>
                                             <br>
                                             Author: <span>Hiro Mashima</span><br>
                                             <br>
@@ -219,7 +230,7 @@
                                             <br>
                                             Studio: <span>A-1 Pictures, Dentsu Inc., Satelight, Bridge, CloverWorks</span><br>
                                         </div>
-                                        <div class="found-like">Found what you like</div>
+                                        <div class="found-like">Found what you like?</div>
                                     </div>
                                 </div>
                             </div>
@@ -279,7 +290,7 @@
                         <div class="video-box">
                             <button class="crunchyroll-button" onclick="window.location.href='https://www.crunchyroll.com/'">Crunchyroll button</button>
                             <div class="anime-info">
-                                Genre: <span>Shounen, Action, Adventure, Comedy, Romance</span>
+                                Genre: <span>Shounen, Action, Adventure, Comedy, Romance</span><br>
                                 <br>
                                 Author: <span>Hiro Mashima</span><br>
                                 <br>
@@ -289,7 +300,7 @@
                                 <br>
                                 Studio: <span>A-1 Pictures, Dentsu Inc., Satelight, Bridge, CloverWorks</span><br>
                             </div>
-                            <div class="found-like">Found what you like</div>
+                            <div class="found-like">Found what you like?</div>
                         </div>
                     </div>
                 </div>
@@ -342,7 +353,7 @@
                         <div class="video-box">
                             <button class="crunchyroll-button" onclick="window.location.href='https://www.crunchyroll.com/'">Crunchyroll button</button>
                             <div class="anime-info">
-                                Genre: <span>Shounen, Action, Adventure, Comedy, Romance</span>
+                                Genre: <span>Shounen, Action, Adventure, Comedy, Romance</span><br>
                                 <br>
                                 Author: <span>Hiro Mashima</span><br>
                                 <br>
@@ -352,7 +363,7 @@
                                 <br>
                                 Studio: <span>A-1 Pictures, Dentsu Inc., Satelight, Bridge, CloverWorks</span><br>
                             </div>
-                            <div class="found-like">Found what you like</div>
+                            <div class="found-like">Found what you like?</div>
                         </div>
                     </div>
                 </div>
@@ -409,7 +420,7 @@
                         <div class="video-box">
                             <button class="crunchyroll-button" onclick="window.location.href='https://www.crunchyroll.com/'">Crunchyroll button</button>
                             <div class="anime-info">
-                                Genre: <span>Shounen, Action, Adventure, Comedy, Romance</span>
+                                Genre: <span>Shounen, Action, Adventure, Comedy, Romance</span><br>
                                 <br>
                                 Author: <span>Hiro Mashima</span><br>
                                 <br>
@@ -419,7 +430,7 @@
                                 <br>
                                 Studio: <span>A-1 Pictures, Dentsu Inc., Satelight, Bridge, CloverWorks</span><br>
                             </div>
-                            <div class="found-like">Found what you like</div>
+                            <div class="found-like">Found what you like?</div>
                         </div>
                     </div>
                 </div>
@@ -472,7 +483,7 @@
                         <div class="video-box">
                             <button class="crunchyroll-button" onclick="window.location.href='https://www.crunchyroll.com/'">Crunchyroll button</button>
                             <div class="anime-info">
-                                Genre: <span>Shounen, Action, Adventure, Comedy, Romance</span>
+                                Genre: <span>Shounen, Action, Adventure, Comedy, Romance</span><br>
                                 <br>
                                 Author: <span>Hiro Mashima</span><br>
                                 <br>
@@ -482,7 +493,7 @@
                                 <br>
                                 Studio: <span>A-1 Pictures, Dentsu Inc., Satelight, Bridge, CloverWorks</span><br>
                             </div>
-                            <div class="found-like">Found what you like</div>
+                            <div class="found-like">Found what you like?</div>
                         </div>
                     </div>
                 </div>
@@ -515,7 +526,7 @@
                         <div class="video-box">
                             <button class="crunchyroll-button" onclick="window.location.href='https://www.crunchyroll.com/'">Crunchyroll button</button>
                             <div class="anime-info">
-                                Genre: <span>Shounen, Action, Adventure, Comedy, Romance</span>
+                                Genre: <span>Shounen, Action, Adventure, Comedy, Romance</span><br>
                                 <br>
                                 Author: <span>Hiro Mashima</span><br>
                                 <br>
@@ -525,7 +536,7 @@
                                 <br>
                                 Studio: <span>A-1 Pictures, Dentsu Inc., Satelight, Bridge, CloverWorks</span><br>
                             </div>
-                            <div class="found-like">Found what you like</div>
+                            <div class="found-like">Found what you like?</div>
                         </div>
                     </div>
                 </div>

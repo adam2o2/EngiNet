@@ -139,6 +139,7 @@ function goBack(detailsId) {
 
 // creates the anime trailer click to the desire location
 
+
 //scroll up arrow
 // Show the scroll-to-top button when user scrolls down
 window.addEventListener('scroll', function() {
@@ -159,3 +160,44 @@ document.getElementById('scroll-to-top').addEventListener('click', function() {
 });
 
 //scroll up arrow
+
+document.addEventListener("DOMContentLoaded", function() {
+    var modal = document.getElementById("aboutModal");
+    var btn = document.getElementById("aboutButton");
+    var span = document.getElementsByClassName("close")[0];
+
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Find the developerButton element
+    var developerButton = document.getElementById("developerButton");
+    
+    // Find the target container to scroll to
+    var container6 = document.querySelector(".container-6");
+    
+    // Calculate the desired scroll position
+    var scrollPosition = container6.getBoundingClientRect().top + window.scrollY - 500; // Adjust the offset as needed
+    
+    // Add click event listener to the developerButton
+    developerButton.addEventListener("click", function() {
+        // Scroll to the top of the container-6
+        container6.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        
+        // Adjust scroll position after scrolling is complete
+        window.scrollTo({ top: scrollPosition, behavior: 'smooth' });
+    });
+});
+
