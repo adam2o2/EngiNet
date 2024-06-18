@@ -1103,4 +1103,23 @@ body {
 .anime-trailer-6 button:hover {
     background-image:transparent 10%; 
 }
-/* Anime Trailer Styles */
+
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #F47521;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 18px;
+    cursor: pointer;
+    display: none; 
+    z-index: 30;
+}
+
+.scroll-to-top i {
+    font-size: 24px;
+}
