@@ -158,3 +158,23 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Find the developerButton element
+    var developerButton = document.getElementById("developerButton");
+    
+    // Find the target container to scroll to
+    var container6 = document.querySelector(".container-6");
+    
+    // Calculate the desired scroll position
+    var scrollPosition = container6.getBoundingClientRect().top + window.scrollY - 500; // Adjust the offset as needed
+    
+    // Add click event listener to the developerButton
+    developerButton.addEventListener("click", function() {
+        // Scroll to the top of the container-6
+        container6.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        
+        // Adjust scroll position after scrolling is complete
+        window.scrollTo({ top: scrollPosition, behavior: 'smooth' });
+    });
+});
