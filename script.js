@@ -116,7 +116,6 @@ function showAnimeDetails(detailsId) {
     const detailsElement = document.getElementById(detailsId);
     detailsElement.style.display = 'block';
 
-    // Add the autoplay parameter to the iframe src
     const iframe = detailsElement.querySelector('iframe');
     const src = iframe.src;
     if (!src.includes('autoplay=1')) {
@@ -131,12 +130,10 @@ function goBack(detailsId) {
     const detailsElement = document.getElementById(detailsId);
     const iframe = detailsElement.querySelector('iframe');
     
-    // Stop the video by removing the autoplay parameter
     iframe.src = iframe.src.replace('&autoplay=1', '').replace('?autoplay=1', '');
     
     detailsElement.style.display = 'none';
 }
-
 // creates the anime trailer click to the desire location
 
 
@@ -161,6 +158,7 @@ document.getElementById('scroll-to-top').addEventListener('click', function() {
 
 //scroll up arrow
 
+// Opens the about button to display details
 document.addEventListener("DOMContentLoaded", function() {
     var modal = document.getElementById("aboutModal");
     var btn = document.getElementById("aboutButton");
@@ -180,24 +178,57 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 });
+// Opens the about button to display details
 
+// Developer button goes straight to the developers section
 document.addEventListener("DOMContentLoaded", function() {
-    // Find the developerButton element
+
     var developerButton = document.getElementById("developerButton");
     
-    // Find the target container to scroll to
     var container6 = document.querySelector(".container-6");
     
-    // Calculate the desired scroll position
-    var scrollPosition = container6.getBoundingClientRect().top + window.scrollY - 500; // Adjust the offset as needed
+    var scrollPosition = container6.getBoundingClientRect().top + window.scrollY - 500; 
     
-    // Add click event listener to the developerButton
     developerButton.addEventListener("click", function() {
-        // Scroll to the top of the container-6
+
         container6.scrollIntoView({ behavior: 'smooth', block: 'start' });
         
-        // Adjust scroll position after scrolling is complete
         window.scrollTo({ top: scrollPosition, behavior: 'smooth' });
     });
 });
+// Developer button goes straight to the developers section
 
+// Selects one the of anime randomly
+const images = [
+    'Mushoku-poster.png',
+    'OnePiece-poster.png',
+    'Konosuba-poster.png',
+    'MHA-poster.png',
+    'DemonSlayer-poster.png',
+    'Kaiju-poster.png',
+    'FairyTail-poster.png',
+    // Add more image paths here
+];
+
+const rollButton = document.getElementById('rollButton');
+const overlay = document.getElementById('overlay');
+const randomImage = document.getElementById('randomImage');
+const crunchyrollButton = document.getElementById('crunchyrollButton');
+
+rollButton.addEventListener('click', () => {
+    const randomIndex = Math.floor(Math.random() * images.length);
+    randomImage.src = images[randomIndex];
+    overlay.style.display = 'flex';  
+});
+
+overlay.addEventListener('click', (event) => {
+    if (event.target === overlay) {
+        overlay.style.display = 'none';  
+    }
+});
+
+crunchyrollButton.addEventListener('click', () => {
+    window.location.href = 'https://www.crunchyroll.com';
+});
+omImage.src = images[randomIndex];
+// Selects one the of anime randomly
