@@ -210,6 +210,18 @@ const images = [
     // Add more image paths here
 ];
 
+// Mapping images to their corresponding Crunchyroll URLs
+const crunchyrollLinks = {
+    'Mushoku-poster.png': 'https://www.crunchyroll.com/series/G24H1N3MP/mushoku-tensei-jobless-reincarnation',
+    'OnePiece-poster.png': 'https://www.crunchyroll.com/series/GRMG8ZQZR/one-piece',
+    'Konosuba-poster.png': 'https://www.crunchyroll.com/series/GYE5K3GQR/konosuba--gods-blessing-on-this-wonderful-world',
+    'MHA-poster.png': 'https://www.crunchyroll.com/series/G6NQ5DWZ6/my-hero-academia',
+    'DemonSlayer-poster.png': 'https://www.crunchyroll.com/series/GY5P48XEY/demon-slayer-kimetsu-no-yaiba',
+    'Kaiju-poster.png': 'https://www.crunchyroll.com/series/GG5H5XQ7D/kaiju-no-8',
+    'FairyTail-poster.png': 'https://www.crunchyroll.com/series/G6DQDD3WR/fairy-tail',
+    // Add more image-URL mappings here
+};
+
 const rollButton = document.getElementById('rollButton');
 const overlay = document.getElementById('overlay');
 const randomImage = document.getElementById('randomImage');
@@ -217,18 +229,22 @@ const crunchyrollButton = document.getElementById('crunchyrollButton');
 
 rollButton.addEventListener('click', () => {
     const randomIndex = Math.floor(Math.random() * images.length);
-    randomImage.src = images[randomIndex];
-    overlay.style.display = 'flex';  
+    const selectedImage = images[randomIndex];
+    randomImage.src = selectedImage;
+    overlay.style.display = 'flex';
+    
+    // Set the Crunchyroll link based on the selected image
+    crunchyrollButton.href = crunchyrollLinks[selectedImage];
 });
 
 overlay.addEventListener('click', (event) => {
     if (event.target === overlay) {
-        overlay.style.display = 'none';  
+        overlay.style.display = 'none';
     }
 });
 
 crunchyrollButton.addEventListener('click', () => {
-    window.location.href = 'https://www.crunchyroll.com';
+    window.location.href = crunchyrollButton.href;
 });
-omImage.src = images[randomIndex];
+
 // Selects one the of anime randomly
