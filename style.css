@@ -34,6 +34,25 @@ body {
 }
 /* Took footer off for now */
 
+.container-home {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0; /* Reset margins */
+    padding: 0; /* Reset padding */
+}
+.rectangle-home {
+    width: 1200px;
+    height: 600px;
+    background-image: url('FairyTail-thumbnail.png'); /* Background image URL */
+    background-size: cover; /* Ensures the background image covers the entire div */
+    background-position: center; /* Centers the background image */
+    margin: 20px 0; /* Margin to provide space around the rectangle */
+}
+
 .container {
     width: 100%;
     min-height: 100vh;
@@ -41,7 +60,7 @@ body {
     display: flex;
     flex-direction: column;
     position: relative;
-    top: 500px;
+    
 }
 
 .rectangle-contain {
@@ -380,7 +399,7 @@ body {
     display: flex;
     flex-direction: column;
     position: relative;
-    top: 1000px;
+    top: 500px;
 }
 
 .rectangle-contain-1 {
@@ -418,7 +437,7 @@ body {
     display: flex;
     flex-direction: column;
     position: relative;
-    top: 1000px;
+    top: 500px;
 }
 
 .rectangle-contain-2 {
@@ -451,7 +470,7 @@ body {
     display: flex;
     flex-direction: column;
     position: relative;
-    top: 1000px;
+    top: 500px;
 }
 
 .rectangle-contain-3 {
@@ -489,7 +508,7 @@ body {
     display: flex;
     flex-direction: column;
     position: relative;
-    top: 1000px;
+    top: 500px;
 }
 
 .rectangle-contain-4 {
@@ -523,7 +542,7 @@ body {
     display: flex;
     flex-direction: column;
     position: relative;
-    top: 1000px;
+    top: 500px;
 }
 
 .rectangle-contain-5 {
@@ -561,7 +580,7 @@ body {
     display: flex;
     flex-direction: column;
     position: relative;
-    top: 1000px;
+    top: 500px;
 }
 
 .rectangle-contain-6 {

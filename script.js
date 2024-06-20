@@ -69,25 +69,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // cycles through the anime description up top
-document.addEventListener("DOMContentLoaded", function() {
-    const demonSlayerContainers = document.querySelectorAll('.character-container');
+// document.addEventListener("DOMContentLoaded", function() {
+//     const demonSlayerContainers = document.querySelectorAll('.character-container');
 
-    let currentIndex = 0;
+//     let currentIndex = 0;
 
-    function rotateImages() {
-        demonSlayerContainers.forEach(container => {
-            container.style.display = 'none';
-        });
+//     function rotateImages() {
+//         demonSlayerContainers.forEach(container => {
+//             container.style.display = 'none';
+//         });
 
-        demonSlayerContainers[currentIndex].style.display = 'block';
+//         demonSlayerContainers[currentIndex].style.display = 'block';
 
-        currentIndex = (currentIndex + 1) % demonSlayerContainers.length;
+//         currentIndex = (currentIndex + 1) % demonSlayerContainers.length;
 
-        setTimeout(rotateImages, 4000);
-    }
+//         setTimeout(rotateImages, 4000);
+//     }
 
-    rotateImages();
-});
+//     rotateImages();
+// });
 // cycles through the anime description up top
 
 // creates the anime trailer click to the desire location
