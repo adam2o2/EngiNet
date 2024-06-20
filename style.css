@@ -44,6 +44,7 @@ body {
     margin: 0; /* Reset margins */
     padding: 0; /* Reset padding */
 }
+
 .rectangle-home {
     width: 1200px;
     height: 600px;
@@ -51,6 +52,64 @@ body {
     background-size: cover; /* Ensures the background image covers the entire div */
     background-position: center; /* Centers the background image */
     margin: 20px 0; /* Margin to provide space around the rectangle */
+    position: relative; /* Required to position the overlay absolutely within this div */
+    overflow: hidden; /* Ensures the image doesn't overflow the boundaries */
+}
+
+.natsu-image {
+    position: absolute;
+    top: 169px;
+    left: 74%;
+    transform: translateX(-50%);
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.gradient-rectangle {
+    width: 1200px;
+    height: 600px;
+    background: linear-gradient(to top, black -2%, transparent 62%);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.details-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: white; /* Text color */
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-family: 'Maven Pro', sans-serif;
+}
+
+.details-container h1 {
+    margin: 10px 0;
+    font-size: 3em; /* Adjust the font size as needed */
+}
+
+.details-container p {
+    margin: 10px 0;
+    font-size: 1.5em; /* Adjust the font size as needed */
+}
+
+.cta-button {
+    margin: 20px 0;
+    padding: 10px 20px;
+    background-color: #F47521;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em; /* Adjust the font size as needed */
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #d3651c;
 }
 
 .container {
