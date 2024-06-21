@@ -821,6 +821,21 @@ body {
     font-size: 25px;
 }
 
+#rerollButton {
+    background-color: #F47521;
+    color: white;
+    border: none;
+    padding: 13px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: inherit;
+    display: block;
+    margin-left: 20px;
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+}
+
 .close {
     color: #aaa;
     float: right;

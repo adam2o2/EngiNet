@@ -222,19 +222,21 @@ const crunchyrollLinks = {
     // Add more image-URL mappings here
 };
 
-const rollButton = document.getElementById('rollButton');
-const overlay = document.getElementById('overlay');
-const randomImage = document.getElementById('randomImage');
-const crunchyrollButton = document.getElementById('crunchyrollButton');
-
-rollButton.addEventListener('click', () => {
+function selectRandomAnime() {
     const randomIndex = Math.floor(Math.random() * images.length);
     const selectedImage = images[randomIndex];
     randomImage.src = selectedImage;
-    overlay.style.display = 'flex';
-    
     // Set the Crunchyroll link based on the selected image
     crunchyrollButton.href = crunchyrollLinks[selectedImage];
+}
+
+rollButton.addEventListener('click', () => {
+    selectRandomAnime();
+    overlay.style.display = 'flex';
+});
+
+rerollButton.addEventListener('click', () => {
+    selectRandomAnime();
 });
 
 overlay.addEventListener('click', (event) => {
