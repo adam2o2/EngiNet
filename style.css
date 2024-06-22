@@ -48,7 +48,6 @@ body {
 .rectangle-home {
     width: 1200px;
     height: 600px;
-    background-image: url('FairyTail-thumbnail.png'); /* Background image URL */
     background-size: cover; /* Ensures the background image covers the entire div */
     background-position: center; /* Centers the background image */
     margin: 20px 0; /* Margin to provide space around the rectangle */
@@ -56,15 +55,14 @@ body {
     overflow: hidden; /* Ensures the image doesn't overflow the boundaries */
 }
 
-.natsu-image {
+.anime-image {
     position: absolute;
-    top: 169px;
-    left: 74%;
-    transform: translateX(-50%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: auto;
-    height: auto;
+    height: 100%; /* Ensures the image covers the height */
     max-width: 100%;
-    max-height: 100%;
 }
 
 .gradient-rectangle {
@@ -112,6 +110,20 @@ body {
     background-color: #d3651c;
 }
 
+.next-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #00A3E0;
+    color: white;
+    border: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.next-button:hover {
+    background-color: #0087b8;
+}
 .container {
     width: 100%;
     min-height: 100vh;

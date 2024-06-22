@@ -250,3 +250,45 @@ crunchyrollButton.addEventListener('click', () => {
 });
 
 // Selects one the of anime randomly
+
+// front
+document.addEventListener('DOMContentLoaded', () => {
+    const titleElement = document.getElementById('title');
+    const subtitleElement = document.getElementById('subtitle');
+    const watchNowButton = document.getElementById('watch-now-button');
+    const nextButton = document.getElementById('next-button');
+    const imageElement = document.querySelector('.anime-image');
+    const rectangleHome = document.querySelector('.rectangle-home');
+
+    const animeDetails = [
+        {
+            title: 'FairyTail',
+            subtitle: 'After 777 years...',
+            imageUrl: 'Natsu.png',
+            linkUrl: 'https://www.crunchyroll.com/',
+            backgroundUrl: 'FairyTail-thumbnail.png'
+        },
+        {
+            title: 'Demon Slayer',
+            subtitle: 'A new adventure begins...',
+            imageUrl: 'DemonSlayer-poster.png',
+            linkUrl: 'https://www.crunchyroll.com/',
+            backgroundUrl: 'DemonSlayer-thumbnail.png'
+        }
+    ];
+
+    let currentIndex = 0;
+
+    nextButton.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % animeDetails.length;
+        const currentDetails = animeDetails[currentIndex];
+
+        titleElement.textContent = currentDetails.title;
+        subtitleElement.textContent = currentDetails.subtitle;
+        watchNowButton.href = currentDetails.linkUrl;
+        imageElement.src = currentDetails.imageUrl;
+        rectangleHome.style.backgroundImage = `url(${currentDetails.backgroundUrl})`;
+    });
+});
+
+// front
