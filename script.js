@@ -280,3 +280,69 @@ document.getElementById('videoOverlay').addEventListener('click', (event) => {
     }
 });
 // Selects one the of anime randomly
+
+// front
+document.addEventListener('DOMContentLoaded', () => {
+    const watchNowButton = document.getElementById('watch-now-button');
+    const nextButton = document.getElementById('next-button');
+    const detailsContainer = document.getElementById('details-container');
+    const rectangleHome = document.querySelector('.rectangle-home');
+
+    const animeDetails = [
+        {
+            title: 'FairyTail',
+            subtitle: 'After 777 years...',
+            imageUrl: 'FairyTail-thumbnail.png',
+            linkUrl: 'https://www.crunchyroll.com/'
+        },
+        {
+            title: 'Demon Slayer',
+            subtitle: 'A new adventure begins...',
+            imageUrl: 'DemonSlayer-poster.png',
+            linkUrl: 'https://www.crunchyroll.com/'
+        },
+        {
+            title: 'One Piece',
+            subtitle: 'One pirate One Dream...',
+            imageUrl: 'OnePiece-poster.png',
+            linkUrl: 'https://www.crunchyroll.com/'
+        }
+    ];
+
+    let currentIndex = 0;
+
+    function updateContent(index) {
+        const currentDetails = animeDetails[index];
+
+        // Update or create title element
+        let titleElement = document.getElementById('title');
+        if (!titleElement) {
+            titleElement = document.createElement('h1');
+            titleElement.id = 'title';
+            detailsContainer.insertBefore(titleElement, detailsContainer.firstChild);
+        }
+        titleElement.textContent = currentDetails.title;
+
+        // Update or create subtitle element
+        let subtitleElement = document.getElementById('subtitle');
+        if (!subtitleElement) {
+            subtitleElement = document.createElement('p');
+            subtitleElement.id = 'subtitle';
+            detailsContainer.insertBefore(subtitleElement, watchNowButton);
+        }
+        subtitleElement.textContent = currentDetails.subtitle;
+
+        watchNowButton.href = currentDetails.linkUrl;
+        rectangleHome.style.backgroundImage = `url(${currentDetails.imageUrl})`;
+    }
+
+    nextButton.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % animeDetails.length;
+        updateContent(currentIndex);
+    });
+
+    // Initialize with the first anime details
+    updateContent(currentIndex);
+});
+
+// front
