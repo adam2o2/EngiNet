@@ -306,6 +306,30 @@ document.addEventListener('DOMContentLoaded', () => {
             subtitle: 'One pirate One Dream...',
             imageUrl: 'OnePiece-poster.png',
             linkUrl: 'https://www.crunchyroll.com/'
+        },
+        {
+            title: 'Jojo bizarre adventure',
+            subtitle: 'Is that a jojo refrence...',
+            imageUrl: 'Jojo-poster.png',
+            linkUrl: 'https://www.crunchyroll.com/'
+        },
+        {
+            title: 'Attack on Titan',
+            subtitle: 'Kill all titans...',
+            imageUrl: 'Attack-poster.png',
+            linkUrl: 'https://www.crunchyroll.com/'
+        },
+        {
+            title: 'Naruto',
+            subtitle: 'Thats the ninja way...',
+            imageUrl: 'Naruto-poster.png',
+            linkUrl: 'https://www.crunchyroll.com/'
+        },
+        {
+            title: 'My Hero Academia',
+            subtitle: 'Go beyond PLUS ULTRA...',
+            imageUrl: 'MHA-poster.png',
+            linkUrl: 'https://www.crunchyroll.com/'
         }
     ];
 

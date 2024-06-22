@@ -101,14 +101,26 @@ body {
 }
 
 .next-button {
-    margin-top: 10px;
-    padding: 10px 20px;
+    position: absolute;
+    top: 50%;
+    right: calc(50% - 600px + -35px); /* Center right, adjust as needed */
+    transform: translateY(-50%) rotate(45deg);
+    width: 70px;
+    height: 70px;
     background-color: black;
     color: white;
     border: none;
     font-size: 1.2em;
-    border-radius: 5px;
     cursor: pointer;
+    text-align: center;
+    line-height: 70px;
+    z-index: 1000;
+}
+
+.next-button span {
+    transform: rotate(-45deg);
+    display: block;
+    width: 100%;
 }
 
 .next-button:hover {
