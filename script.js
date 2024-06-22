@@ -222,31 +222,61 @@ const crunchyrollLinks = {
     // Add more image-URL mappings here
 };
 
+// Mapping images to their corresponding YouTube URLs
+const youtubeLinks = {
+    'Mushoku-poster.png': 'https://www.youtube.com/embed/wwKZYTsxIhk',
+    'OnePiece-poster.png': 'https://www.youtube.com/embed/VP8QfLfuE7g',
+    'Konosuba-poster.png': 'https://www.youtube.com/embed/p37syJvrlro',
+    'MHA-poster.png': 'https://www.youtube.com/embed/UvEGL9KDGNQ',
+    'DemonSlayer-poster.png': 'https://www.youtube.com/embed/7w5Vfjozzb8',
+    'Kaiju-poster.png': 'https://www.youtube.com/embed/JwF7bhvnCxI',
+    'FairyTail-poster.png': 'https://www.youtube.com/embed/SjYlGEvG2Go',
+    // Add more image-URL mappings here
+};
+
 function selectRandomAnime() {
     const randomIndex = Math.floor(Math.random() * images.length);
     const selectedImage = images[randomIndex];
+    const randomImage = document.getElementById('randomImage');
+    const crunchyrollButton = document.getElementById('crunchyrollButton');
+
     randomImage.src = selectedImage;
-    // Set the Crunchyroll link based on the selected image
+    randomImage.dataset.youtubeLink = youtubeLinks[selectedImage];  // Store YouTube link in data attribute
     crunchyrollButton.href = crunchyrollLinks[selectedImage];
 }
 
-rollButton.addEventListener('click', () => {
+document.getElementById('rollButton').addEventListener('click', () => {
     selectRandomAnime();
-    overlay.style.display = 'flex';
+    document.getElementById('overlay').style.display = 'flex';
 });
 
-rerollButton.addEventListener('click', () => {
+document.getElementById('rerollButton').addEventListener('click', () => {
     selectRandomAnime();
 });
 
-overlay.addEventListener('click', (event) => {
-    if (event.target === overlay) {
-        overlay.style.display = 'none';
+document.getElementById('overlay').addEventListener('click', (event) => {
+    if (event.target === document.getElementById('overlay')) {
+        document.getElementById('overlay').style.display = 'none';
     }
 });
 
-crunchyrollButton.addEventListener('click', () => {
-    window.location.href = crunchyrollButton.href;
+document.getElementById('crunchyrollButton').addEventListener('click', () => {
+    window.location.href = document.getElementById('crunchyrollButton').href;
 });
 
+document.getElementById('randomImage').addEventListener('click', () => {
+    const youtubeLink = document.getElementById('randomImage').dataset.youtubeLink;
+    if (youtubeLink) {
+        const youtubeIframe = document.getElementById('youtubeIframe');
+        youtubeIframe.src = youtubeLink;
+        document.getElementById('videoOverlay').style.display = 'flex';
+    }
+});
+
+document.getElementById('videoOverlay').addEventListener('click', (event) => {
+    if (event.target === document.getElementById('videoOverlay')) {
+        document.getElementById('videoOverlay').style.display = 'none';
+        document.getElementById('youtubeIframe').src = '';  // Stop the video
+    }
+});
 // Selects one the of anime randomly
