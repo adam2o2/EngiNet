@@ -92,46 +92,69 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // creates the anime trailer click to the desire location
 document.addEventListener('DOMContentLoaded', function() {
-    const containers = document.querySelectorAll('.container, .container-1, .container-2, .container-3, .container-4, .container-5, .container-6');
-    containers.forEach((container, index) => {
-        const sections = container.querySelectorAll('.box-group');
-        sections.forEach(section => {
-            section.addEventListener('click', function() {
-                showAnimeDetails(
-                    index === 0 ? 'anime-details' :
-                    index === 1 ? 'anime-details-1' :
-                    index === 2 ? 'anime-details-2' :
-                    index === 3 ? 'anime-details-3' :
-                    index === 4 ? 'anime-details-4' :
-                    index === 5 ? 'anime-details-5' :
-                    'anime-details-6'
-                  );
-                  
+    const containers = document.querySelectorAll('.container, .container-1, .container-2, .container-3, .container-4, .container-5'); 
+    
+    containers.forEach(container => {
+        const boxes = container.querySelectorAll('.box-group');
+        
+        boxes.forEach(box => {
+            box.addEventListener('click', function() {
+                const youtubeLink = box.getAttribute('data-youtube');
+                let detailsId;
+
+                if (container.classList.contains('container')) {
+                    detailsId = 'anime-details';
+                } else if (container.classList.contains('container-1')) {
+                    detailsId = 'anime-details-1';
+                } else if (container.classList.contains('container-2')) {
+                    detailsId = 'anime-details-2';
+                } else if (container.classList.contains('container-3')) {
+                    detailsId = 'anime-details-3';
+                } else if (container.classList.contains('container-4')) { 
+                    detailsId = 'anime-details-4';
+                } else if (container.classList.contains('container-5')) { 
+                    detailsId = 'anime-details-5';
+                } else {
+                    detailsId = 'default-details-id';
+                }
+
+                showAnimeDetails(detailsId, youtubeLink);
             });
         });
     });
 });
 
-function showAnimeDetails(detailsId) {
+function showAnimeDetails(detailsId, youtubeLink) {
     const detailsElement = document.getElementById(detailsId);
     detailsElement.style.display = 'block';
 
     const iframe = detailsElement.querySelector('iframe');
-    const src = iframe.src;
-    if (!src.includes('autoplay=1')) {
-        iframe.src = src.includes('?') ? `${src}&autoplay=1` : `${src}?autoplay=1`;
+    iframe.src = youtubeLink.includes('?') ? `${youtubeLink}&autoplay=1` : `${youtubeLink}?autoplay=1`;
+
+    let targetElement;
+    if (detailsId === 'anime-details') {
+        targetElement = detailsElement.querySelector('.anime-trailer');
+    } else if (detailsId === 'anime-details-1') {
+        targetElement = detailsElement.querySelector('.anime-trailer-1');
+    } else if (detailsId === 'anime-details-2') {
+        targetElement = detailsElement.querySelector('.anime-trailer-2');
+    } else if (detailsId === 'anime-details-3') {
+        targetElement = detailsElement.querySelector('.anime-trailer-3');
+    } else if (detailsId === 'anime-details-4') { 
+        targetElement = detailsElement.querySelector('.anime-trailer-4');
+    } else if (detailsId === 'anime-details-5') { 
+        targetElement = detailsElement.querySelector('.anime-trailer-5');
+    } else {
+        return;
     }
 
-    const targetElement = detailsElement.querySelector('.anime-trailer, .anime-trailer-1, .anime-trailer-2, .anime-trailer-3, .anime-trailer-4, .anime-trailer-5, .anime-trailer-6');
     targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 function goBack(detailsId) {
     const detailsElement = document.getElementById(detailsId);
     const iframe = detailsElement.querySelector('iframe');
-    
-    iframe.src = iframe.src.replace('&autoplay=1', '').replace('?autoplay=1', '');
-    
+    iframe.src = '';
     detailsElement.style.display = 'none';
 }
 // creates the anime trailer click to the desire location

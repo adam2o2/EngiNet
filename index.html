@@ -63,57 +63,113 @@
                 <!-- Front page -->   
                  
                     <!-- This is the first row ------------------------------------------------------------------------------------------------------------------------------>
-            <div class="container">
-                <div class="rectangle-contain">
+                    <div class="container">
+                        <div class="rectangle-contain">
+                            <button id="scroll-button-back">Back</button>
+                            <button id="scroll-button-next">Next</button>
+                            <div class="image-slider">
+                                <div class="box-group" id="group-1" data-youtube="https://www.youtube.com/embed/7opd_2MbJMw">
+                                    <div class="box-1">
+                                        <img src="Bleach.png" alt="Bleach Image">
+                                    </div>
+                                </div>
+                    
+                                <div class="box-group" id="group-2" data-youtube="https://www.youtube.com/embed/zxXID_zR-HY">
+                                    <div class="box-1">
+                                        <img src="Dungeon.png" alt="Dungeon Image">
+                                    </div>
+                                </div>
+                                <div class="box-group" id="group-3" data-youtube="https://www.youtube.com/embed/Q2dTtukkgD4">
+                                    <div class="box-1">
+                                        <img src="Mushoku.png" alt="Mushoku Image">
+                                    </div>
+                                </div>
+                                <div class="box-group" id="group-4" data-youtube="https://www.youtube.com/embed/YJ34bLwtVUM">
+                                    <div class="box-1">
+                                        <img src="OnePiece.png" alt="OnePiece Image">
+                                    </div>
+                                </div>
+                                <div class="box-group" id="group-5" data-youtube="https://www.youtube.com/embed/7w5Vfjozzb8">
+                                    <div class="box-1">
+                                        <img src="DemonSlayer.png" alt="Bleach Image">
+                                    </div>
+                                </div>
+                                <div class="box-group" id="group-6" data-youtube="https://www.youtube.com/embed/UvEGL9KDGNQ">
+                                    <div class="box-1">
+                                        <img src="MHA.png" alt="Bleach Image">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="recommend-text">Shonen</div>
+                        </div>
+                        <div id="anime-details" style="display:none;">
+                            <div class="anime-trailer">
+                                <button class="back-button" onclick="goBack('anime-details')">Back</button>
+                                <iframe width="1080" height="615" src="" frameborder="0" allowfullscreen></iframe>
+                                <div class="video-box">
+                                    <button class="crunchyroll-button" onclick="window.location.href='https://www.crunchyroll.com/'">Crunchyroll button</button>
+                                    <div class="anime-info">
+                                        Genre: <span>Shounen, Action, Adventure, Comedy, Romance</span><br>
+                                        <br>
+                                        Author: <span>Hiro Mashima</span><br>
+                                        <br>
+                                        Year Published: <span>2006</span><br>
+                                        <br>
+                                        Episodes: <span>568</span><br>
+                                        <br>
+                                        Studio: <span>A-1 Pictures, Dentsu Inc., Satelight, Bridge, CloverWorks</span><br>
+                                    </div>
+                                    <div class="found-like">Found what you like?</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+            <!-- This is the first row ------------------------------------------------------------------------------------------------------------------------------>
+
+            <!-- This is the second row ------------------------------------------------------------------------------------------------------------------------------>
+            <div class="container-1">
+                <div class="rectangle-contain-1">
                     <button id="scroll-button-back">Back</button>
                     <button id="scroll-button-next">Next</button>
                     <div class="image-slider">
-                        <div class="box-group" id="group-1">  
+                        <div class="box-group" id="group-1" data-youtube="https://www.youtube.com/embed/9F2HFf-JJSg">
                             <div class="box-1">
                                 <img src="Bleach.png" alt="Bleach Image">
                             </div>
-                            
                         </div>
-
-                        <div class="box-group" id="group-2">
+                        <div class="box-group" id="group-2" data-youtube="https://www.youtube.com/embed/zxXID_zR-HY">
                             <div class="box-1">
                                 <img src="Dungeon.png" alt="Dungeon Image">
                             </div>
-                            
                         </div>
-                        <div class="box-group" id="group-3">
+                        <div class="box-group" id="group-3" data-youtube="https://www.youtube.com/embed/Q2dTtukkgD4">
                             <div class="box-1">
                                 <img src="Mushoku.png" alt="Mushoku Image">
                             </div>
-                            
                         </div>
-                        <div class="box-group" id="group-4">
+                        <div class="box-group" id="group-4" data-youtube="https://www.youtube.com/embed/YJ34bLwtVUM">
                             <div class="box-1">
                                 <img src="OnePiece.png" alt="OnePiece Image">
                             </div>
-                            
                         </div>
-                        <div class="box-group" id="group-5">
+                        <div class="box-group" id="group-5" data-youtube="https://www.youtube.com/embed/7w5Vfjozzb8">
                             <div class="box-1">
-                                <img src="DemonSlayer.png" alt="Bleach Image">
+                                <img src="DemonSlayer.png" alt="DemonSlayer Image">
                             </div>
-                            
                         </div>
-                        <div class="box-group" id="group-6">
+                        <div class="box-group" id="group-6" data-youtube="https://www.youtube.com/embed/UvEGL9KDGNQ">
                             <div class="box-1">
-                                <img src="MHA.png" alt="Bleach Image">
+                                <img src="MHA.png" alt="MHA Image">
                             </div>
-                            
                         </div>
                     </div>
-                        <div class="recommend-text">Shonen</div>   
+                    <div class="recommend-text-1">Adventure</div>
                 </div>
-                      <!-- Add this new section for anime details (include below the existing boxes) -->
-                       <!-- In order for all boxes to work correctly need to rename group-1 thorugh group-6 -->
-                <div id="anime-details" style="display:none;">
-                    <div class="anime-trailer">
-                        <button class="back-button" onclick="goBack('anime-details')">Back</button>
-                            <iframe width="1080" height="615" src="https://www.youtube.com/embed/SjYlGEvG2Go" frameborder="0" allowfullscreen></iframe>
+                <div id="anime-details-1" style="display:none;">
+                    <div class="anime-trailer-1">
+                        <button class="back-button" onclick="goBack('anime-details-1')">Back</button>
+                        <iframe width="1080" height="615" src="" frameborder="0" allowfullscreen></iframe>
                         <div class="video-box">
                             <button class="crunchyroll-button" onclick="window.location.href='https://www.crunchyroll.com/'">Crunchyroll button</button>
                             <div class="anime-info">
@@ -131,122 +187,53 @@
                         </div>
                     </div>
                 </div>
-            </div> 
-            <!-- This is the first row ------------------------------------------------------------------------------------------------------------------------------>
-
-            <!-- This is the second row ------------------------------------------------------------------------------------------------------------------------------>
-                        <div class="container-1">
-                            <div class="rectangle-contain-1">
-                                <button id="scroll-button-back">Back</button>
-                                <button id="scroll-button-next">Next</button>
-                                <div class="image-slider">
-                                    <div class="box-group" id="group-1">
-                                        <div class="box-1">
-                                            <img src="Bleach.png" alt="Bleach Image">
-                                        </div>
-                                    </div>
-                                    <div class="box-group" id="group-2">
-                                        <div class="box-1">
-                                            <img src="Dungeon.png" alt="Dungeon Image">
-                                        </div>
-                                    </div>
-                                    <div class="box-group" id="group-3">
-                                        <div class="box-1">
-                                            <img src="Mushoku.png" alt="Mushoku Image">
-                                        </div>
-                                    </div>
-                                    <div class="box-group" id="group-4">
-                                        <div class="box-1">
-                                            <img src="OnePiece.png" alt="OnePiece Image">
-                                        </div>
-                                    </div>
-                                    <div class="box-group" id="group-5">
-                                        <div class="box-1">
-                                            <img src="DemonSlayer.png" alt="DemonSlayer Image">
-                                        </div>
-                                    </div>
-                                    <div class="box-group" id="group-6">
-                                        <div class="box-1">
-                                            <img src="MHA.png" alt="MHA Image">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="recommend-text-1">Adventure</div>
-                            </div>
-                            <div id="anime-details-1" style="display:none;">
-                                <div class="anime-trailer-1">
-                                    <button class="back-button" onclick="goBack('anime-details-1')">Back</button>
-                                        <iframe width="1080" height="615" src="https://www.youtube.com/embed/SjYlGEvG2Go" frameborder="0" allowfullscreen></iframe>
-                                    <div class="video-box">
-                                        <button class="crunchyroll-button" onclick="window.location.href='https://www.crunchyroll.com/'">Crunchyroll button</button>
-                                        <div class="anime-info">
-                                            Genre: <span>Shounen, Action, Adventure, Comedy, Romance</span><br>
-                                            <br>
-                                            Author: <span>Hiro Mashima</span><br>
-                                            <br>
-                                            Year Published: <span>2006</span><br>
-                                            <br>
-                                            Episodes: <span>568</span><br>
-                                            <br>
-                                            Studio: <span>A-1 Pictures, Dentsu Inc., Satelight, Bridge, CloverWorks</span><br>
-                                        </div>
-                                        <div class="found-like">Found what you like?</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>                       
+            </div>
+              
             <!-- This is the second row ------------------------------------------------------------------------------------------------------------------------------>
 
             <!-- This is the third row ------------------------------------------------------------------------------------------------------------------------------>
             <div class="container-2">
                 <div class="rectangle-contain-2">
-               <button id="scroll-button-back">Back</button>
-                <button id="scroll-button-next">Next</button>
-                <div class="image-slider">
-                    <div class="box-group" id="group-1">
-                        <div class="box-1">
-                            <img src="Bleach.png" alt="Bleach Image">
+                    <button id="scroll-button-back">Back</button>
+                    <button id="scroll-button-next">Next</button>
+                    <div class="image-slider">
+                        <div class="box-group" id="group-1" data-youtube="https://www.youtube.com/embed/PrgxJ1_sUcs">
+                            <div class="box-1">
+                                <img src="Bleach.png" alt="Bleach Image">
+                            </div>
                         </div>
-
-                    </div>
-
-                    <div class="box-group" id="group-2">
-                        <div class="box-1">
-                            <img src="Dungeon.png" alt="Dungeon Image">
+                        <div class="box-group" id="group-2" data-youtube="https://www.youtube.com/embed/zxXID_zR-HY">
+                            <div class="box-1">
+                                <img src="Dungeon.png" alt="Dungeon Image">
+                            </div>
                         </div>
-
-                    </div>
-                    <div class="box-group" id="group-3">
-                        <div class="box-1">
-                            <img src="Mushoku.png" alt="Mushoku Image">
+                        <div class="box-group" id="group-3" data-youtube="https://www.youtube.com/embed/Q2dTtukkgD4">
+                            <div class="box-1">
+                                <img src="Mushoku.png" alt="Mushoku Image">
+                            </div>
                         </div>
-
-                    </div>
-                    <div class="box-group" id="group-4">
-                        <div class="box-1">
-                            <img src="OnePiece.png" alt="OnePiece Image">
+                        <div class="box-group" id="group-4" data-youtube="https://www.youtube.com/embed/YJ34bLwtVUM">
+                            <div class="box-1">
+                                <img src="OnePiece.png" alt="OnePiece Image">
+                            </div>
                         </div>
-
-                    </div>
-                    <div class="box-group" id="group-5">
-                        <div class="box-1">
-                            <img src="DemonSlayer.png" alt="Bleach Image">
+                        <div class="box-group" id="group-5" data-youtube="https://www.youtube.com/embed/7w5Vfjozzb8">
+                            <div class="box-1">
+                                <img src="DemonSlayer.png" alt="Bleach Image">
+                            </div>
                         </div>
-
-                    </div>
-                    <div class="box-group" id="group-6">
-                        <div class="box-1">
-                            <img src="MHA.png" alt="Bleach Image">
+                        <div class="box-group" id="group-6" data-youtube="https://www.youtube.com/embed/UvEGL9KDGNQ">
+                            <div class="box-1">
+                                <img src="MHA.png" alt="Bleach Image">
+                            </div>
                         </div>
-
                     </div>
-                </div>
                     <div class="recommend-text-2">Action</div>
                 </div>
                 <div id="anime-details-2" style="display:none;">
                     <div class="anime-trailer-2">
                         <button class="back-button" onclick="goBack('anime-details-2')">Back</button>
-                            <iframe width="1080" height="615" src="https://www.youtube.com/embed/SjYlGEvG2Go" frameborder="0" allowfullscreen></iframe>
+                        <iframe width="1080" height="615" src="" frameborder="0" allowfullscreen></iframe>
                         <div class="video-box">
                             <button class="crunchyroll-button" onclick="window.location.href='https://www.crunchyroll.com/'">Crunchyroll button</button>
                             <div class="anime-info">
@@ -264,200 +251,197 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>            
         <!-- This is the third row ------------------------------------------------------------------------------------------------------------------------------>
 
         <!-- This is the fourth row ------------------------------------------------------------------------------------------------------------------------------>
-            <div class="container-3">
-                <div class="rectangle-contain-3">
-                    <button id="scroll-button-back">Back</button>
-                    <button id="scroll-button-next">Next</button>
-                    <div class="image-slider">
-                        <div class="box-group" id="group-1">
-                            <div class="box-1">
-                                <img src="Bleach.png" alt="Bleach Image">
-                            </div>
-                        </div>
-                        <div class="box-group" id="group-2">
-                            <div class="box-1">
-                                <img src="Dungeon.png" alt="Dungeon Image">
-                            </div>
-                        </div>
-                        <div class="box-group" id="group-3">
-                            <div class="box-1">
-                                <img src="Mushoku.png" alt="Mushoku Image">
-                            </div>
-                        </div>
-                        <div class="box-group" id="group-4">
-                            <div class="box-1">
-                                <img src="OnePiece.png" alt="OnePiece Image">
-                            </div>
-                        </div>
-                        <div class="box-group" id="group-5">
-                            <div class="box-1">
-                                <img src="DemonSlayer.png" alt="DemonSlayer Image">
-                            </div>
-                        </div>
-                        <div class="box-group" id="group-6">
-                            <div class="box-1">
-                                <img src="MHA.png" alt="MHA Image">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="recommend-text-3">Comedy</div>
-                </div>
-                <div id="anime-details-3" style="display:none;">
-                    <div class="anime-trailer-3">
-                        <button class="back-button" onclick="goBack('anime-details-3')">Back</button>
-                            <iframe width="1080" height="615" src="https://www.youtube.com/embed/SjYlGEvG2Go" frameborder="0" allowfullscreen></iframe>
-                        <div class="video-box">
-                            <button class="crunchyroll-button" onclick="window.location.href='https://www.crunchyroll.com/'">Crunchyroll button</button>
-                            <div class="anime-info">
-                                Genre: <span>Shounen, Action, Adventure, Comedy, Romance</span><br>
-                                <br>
-                                Author: <span>Hiro Mashima</span><br>
-                                <br>
-                                Year Published: <span>2006</span><br>
-                                <br>
-                                Episodes: <span>568</span><br>
-                                <br>
-                                Studio: <span>A-1 Pictures, Dentsu Inc., Satelight, Bridge, CloverWorks</span><br>
-                            </div>
-                            <div class="found-like">Found what you like?</div>
-                        </div>
-                    </div>
-                </div>
-            </div>                       
-        <!-- This is the fourth row ------------------------------------------------------------------------------------------------------------------------------>
-
-        <!-- This is the fifth row ------------------------------------------------------------------------------------------------------------------------------>
-            <div class="container-4">
-                <div class="rectangle-contain-4">
-               <button id="scroll-button-back">Back</button>
+        <div class="container-3">
+            <div class="rectangle-contain-3">
+                <button id="scroll-button-back">Back</button>
                 <button id="scroll-button-next">Next</button>
                 <div class="image-slider">
-                    <div class="box-group" id="group-1">
+                    <div class="box-group" id="group-1" data-youtube="https://www.youtube.com/embed/0qBa70CeVfM">
                         <div class="box-1">
                             <img src="Bleach.png" alt="Bleach Image">
                         </div>
-
                     </div>
-
-                    <div class="box-group" id="group-2">
+                    <div class="box-group" id="group-2" data-youtube="https://www.youtube.com/embed/zxXID_zR-HY">
                         <div class="box-1">
                             <img src="Dungeon.png" alt="Dungeon Image">
                         </div>
                     </div>
-                    <div class="box-group" id="group-3">
+                    <div class="box-group" id="group-3" data-youtube="https://www.youtube.com/embed/Q2dTtukkgD4">
                         <div class="box-1">
                             <img src="Mushoku.png" alt="Mushoku Image">
                         </div>
-
                     </div>
-                    <div class="box-group" id="group-4">
+                    <div class="box-group" id="group-4" data-youtube="https://www.youtube.com/embed/YJ34bLwtVUM">
                         <div class="box-1">
                             <img src="OnePiece.png" alt="OnePiece Image">
                         </div>
-
                     </div>
-                    <div class="box-group" id="group-5">
+                    <div class="box-group" id="group-5" data-youtube="https://www.youtube.com/embed/7w5Vfjozzb8">
                         <div class="box-1">
-                            <img src="DemonSlayer.png" alt="Bleach Image">
+                            <img src="DemonSlayer.png" alt="DemonSlayer Image">
                         </div>
                     </div>
-                    <div class="box-group" id="group-6">
+                    <div class="box-group" id="group-6" data-youtube="https://www.youtube.com/embed/UvEGL9KDGNQ">
                         <div class="box-1">
-                            <img src="MHA.png" alt="Bleach Image">
+                            <img src="MHA.png" alt="MHA Image">
                         </div>
                     </div>
                 </div>
-                    <div class="recommend-text-4">Romance</div>
-                </div>
-                <div id="anime-details-4" style="display:none;">
-                    <div class="anime-trailer-4">
-                        <button class="back-button" onclick="goBack('anime-details-4')">Back</button>
-                            <iframe width="1080" height="615" src="https://www.youtube.com/embed/SjYlGEvG2Go" frameborder="0" allowfullscreen></iframe>
-                        <div class="video-box">
-                            <button class="crunchyroll-button" onclick="window.location.href='https://www.crunchyroll.com/'">Crunchyroll button</button>
-                            <div class="anime-info">
-                                Genre: <span>Shounen, Action, Adventure, Comedy, Romance</span><br>
-                                <br>
-                                Author: <span>Hiro Mashima</span><br>
-                                <br>
-                                Year Published: <span>2006</span><br>
-                                <br>
-                                Episodes: <span>568</span><br>
-                                <br>
-                                Studio: <span>A-1 Pictures, Dentsu Inc., Satelight, Bridge, CloverWorks</span><br>
-                            </div>
-                            <div class="found-like">Found what you like?</div>
+                <div class="recommend-text-3">Comedy</div>
+            </div>
+            <div id="anime-details-3" style="display:none;">
+                <div class="anime-trailer-3"> <!-- Changed class to anime-trailer-2 to match container-2 -->
+                    <button class="back-button" onclick="goBack('anime-details-3')">Back</button>
+                    <iframe width="1080" height="615" src="https://www.youtube.com/embed/SjYlGEvG2Go" frameborder="0" allowfullscreen></iframe>
+                    <div class="video-box">
+                        <button class="crunchyroll-button" onclick="window.location.href='https://www.crunchyroll.com/'">Crunchyroll button</button>
+                        <div class="anime-info">
+                            Genre: <span>Shounen, Action, Adventure, Comedy, Romance</span><br>
+                            <br>
+                            Author: <span>Hiro Mashima</span><br>
+                            <br>
+                            Year Published: <span>2006</span><br>
+                            <br>
+                            Episodes: <span>568</span><br>
+                            <br>
+                            Studio: <span>A-1 Pictures, Dentsu Inc., Satelight, Bridge, CloverWorks</span><br>
                         </div>
+                        <div class="found-like">Found what you like?</div>
                     </div>
                 </div>
             </div>
+        </div>
+                        
+        <!-- This is the fourth row ------------------------------------------------------------------------------------------------------------------------------>
+
+        <!-- This is the fifth row ------------------------------------------------------------------------------------------------------------------------------>
+        <div class="container-4">
+            <div class="rectangle-contain-4">
+                <button id="scroll-button-back">Back</button>
+                <button id="scroll-button-next">Next</button>
+                <div class="image-slider">
+                    <div class="box-group" id="group-1" data-youtube="https://www.youtube.com/embed/9OhV3IWUsxE">
+                        <div class="box-1">
+                            <img src="Bleach.png" alt="Bleach Image">
+                        </div>
+                    </div>
+                    <div class="box-group" id="group-2" data-youtube="https://www.youtube.com/embed/zxXID_zR-HY">
+                        <div class="box-1">
+                            <img src="Dungeon.png" alt="Dungeon Image">
+                        </div>
+                    </div>
+                    <div class="box-group" id="group-3" data-youtube="https://www.youtube.com/embed/Q2dTtukkgD4">
+                        <div class="box-1">
+                            <img src="Mushoku.png" alt="Mushoku Image">
+                        </div>
+                    </div>
+                    <div class="box-group" id="group-4" data-youtube="https://www.youtube.com/embed/YJ34bLwtVUM">
+                        <div class="box-1">
+                            <img src="OnePiece.png" alt="OnePiece Image">
+                        </div>
+                    </div>
+                    <div class="box-group" id="group-5" data-youtube="https://www.youtube.com/embed/7w5Vfjozzb8">
+                        <div class="box-1">
+                            <img src="DemonSlayer.png" alt="DemonSlayer Image">
+                        </div>
+                    </div>
+                    <div class="box-group" id="group-6" data-youtube="https://www.youtube.com/embed/UvEGL9KDGNQ">
+                        <div class="box-1">
+                            <img src="MHA.png" alt="MHA Image">
+                        </div>
+                    </div>
+                </div>
+                <div class="recommend-text-4">Romance</div>
+            </div>
+            <div id="anime-details-4" style="display:none;">
+                <div class="anime-trailer-4"> <!-- Changed class to anime-trailer-2 to match container-2 -->
+                    <button class="back-button" onclick="goBack('anime-details-4')">Back</button>
+                    <iframe width="1080" height="615" src="https://www.youtube.com/embed/SjYlGEvG2Go" frameborder="0" allowfullscreen></iframe>
+                    <div class="video-box">
+                        <button class="crunchyroll-button" onclick="window.location.href='https://www.crunchyroll.com/'">Crunchyroll button</button>
+                        <div class="anime-info">
+                            Genre: <span>Shounen, Action, Adventure, Comedy, Romance</span><br>
+                            <br>
+                            Author: <span>Hiro Mashima</span><br>
+                            <br>
+                            Year Published: <span>2006</span><br>
+                            <br>
+                            Episodes: <span>568</span><br>
+                            <br>
+                            Studio: <span>A-1 Pictures, Dentsu Inc., Satelight, Bridge, CloverWorks</span><br>
+                        </div>
+                        <div class="found-like">Found what you like?</div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- This is the fifth row ------------------------------------------------------------------------------------------------------------------------------>
 
         <!-- This is the sixth row ------------------------------------------------------------------------------------------------------------------------------>
-            <div class="container-5">
-                <div class="rectangle-contain-5">
-                    <button id="scroll-button-back">Back</button>
-                    <button id="scroll-button-next">Next</button>
-                    <div class="image-slider">
-                        <div class="box-group" id="group-1">
-                            <div class="box-1">
-                                <img src="Bleach.png" alt="Bleach Image">
-                            </div>
-                        </div>
-                        <div class="box-group" id="group-2">
-                            <div class="box-1">
-                                <img src="Dungeon.png" alt="Dungeon Image">
-                            </div>
-                        </div>
-                        <div class="box-group" id="group-3">
-                            <div class="box-1">
-                                <img src="Mushoku.png" alt="Mushoku Image">
-                            </div>
-                        </div>
-                        <div class="box-group" id="group-4">
-                            <div class="box-1">
-                                <img src="OnePiece.png" alt="OnePiece Image">
-                            </div>
-                        </div>
-                        <div class="box-group" id="group-5">
-                            <div class="box-1">
-                                <img src="DemonSlayer.png" alt="DemonSlayer Image">
-                            </div>
-                        </div>
-                        <div class="box-group" id="group-6">
-                            <div class="box-1">
-                                <img src="MHA.png" alt="MHA Image">
-                            </div>
+        <div class="container-5">
+            <div class="rectangle-contain-5">
+                <button id="scroll-button-back">Back</button>
+                <button id="scroll-button-next">Next</button>
+                <div class="image-slider">
+                    <div class="box-group" id="group-1" data-youtube="https://www.youtube.com/embed/pl4a2eQUgpc">
+                        <div class="box-1">
+                            <img src="Bleach.png" alt="Bleach Image">
                         </div>
                     </div>
-                    <div class="recommend-text-5">Sports</div>
-                </div>
-                <div id="anime-details-5" style="display:none;">
-                    <div class="anime-trailer-5">
-                        <button class="back-button" onclick="goBack('anime-details-5')">Back</button>
-                            <iframe width="1080" height="615" src="https://www.youtube.com/embed/SjYlGEvG2Go" frameborder="0" allowfullscreen></iframe>
-                        <div class="video-box">
-                            <button class="crunchyroll-button" onclick="window.location.href='https://www.crunchyroll.com/'">Crunchyroll button</button>
-                            <div class="anime-info">
-                                Genre: <span>Shounen, Action, Adventure, Comedy, Romance</span><br>
-                                <br>
-                                Author: <span>Hiro Mashima</span><br>
-                                <br>
-                                Year Published: <span>2006</span><br>
-                                <br>
-                                Episodes: <span>568</span><br>
-                                <br>
-                                Studio: <span>A-1 Pictures, Dentsu Inc., Satelight, Bridge, CloverWorks</span><br>
-                            </div>
-                            <div class="found-like">Found what you like?</div>
+                    <div class="box-group" id="group-2" data-youtube="https://www.youtube.com/embed/zxXID_zR-HY">
+                        <div class="box-1">
+                            <img src="Dungeon.png" alt="Dungeon Image">
+                        </div>
+                    </div>
+                    <div class="box-group" id="group-3" data-youtube="https://www.youtube.com/embed/Q2dTtukkgD4">
+                        <div class="box-1">
+                            <img src="Mushoku.png" alt="Mushoku Image">
+                        </div>
+                    </div>
+                    <div class="box-group" id="group-4" data-youtube="https://www.youtube.com/embed/YJ34bLwtVUM">
+                        <div class="box-1">
+                            <img src="OnePiece.png" alt="OnePiece Image">
+                        </div>
+                    </div>
+                    <div class="box-group" id="group-5" data-youtube="https://www.youtube.com/embed/7w5Vfjozzb8">
+                        <div class="box-1">
+                            <img src="DemonSlayer.png" alt="DemonSlayer Image">
+                        </div>
+                    </div>
+                    <div class="box-group" id="group-6" data-youtube="https://www.youtube.com/embed/UvEGL9KDGNQ">
+                        <div class="box-1">
+                            <img src="MHA.png" alt="MHA Image">
                         </div>
                     </div>
                 </div>
-            </div>                       
+                <div class="recommend-text-5">Sports</div>
+            </div>
+            <div id="anime-details-5" style="display:none;">
+                <div class="anime-trailer-5"> <!-- Changed class to anime-trailer-2 to match container-2 -->
+                    <button class="back-button" onclick="goBack('anime-details-5')">Back</button>
+                    <iframe width="1080" height="615" src="https://www.youtube.com/embed/SjYlGEvG2Go" frameborder="0" allowfullscreen></iframe>
+                    <div class="video-box">
+                        <button class="crunchyroll-button" onclick="window.location.href='https://www.crunchyroll.com/'">Crunchyroll button</button>
+                        <div class="anime-info">
+                            Genre: <span>Shounen, Action, Adventure, Comedy, Romance</span><br>
+                            <br>
+                            Author: <span>Hiro Mashima</span><br>
+                            <br>
+                            Year Published: <span>2006</span><br>
+                            <br>
+                            Episodes: <span>568</span><br>
+                            <br>
+                            Studio: <span>A-1 Pictures, Dentsu Inc., Satelight, Bridge, CloverWorks</span><br>
+                        </div>
+                        <div class="found-like">Found what you like?</div>
+                    </div>
+                </div>
+            </div>
+        </div>                       
         <!-- This is the sixth row ------------------------------------------------------------------------------------------------------------------------------>
 
         <!-- This is the seventh row ------------------------------------------------------------------------------------------------------------------------------>
@@ -478,27 +462,6 @@
                     </div>
                 </div>
                     <div class="recommend-text-6">Developers</div>
-                </div>
-                <div id="anime-details-6" style="display:none;">
-                    <div class="anime-trailer-6">
-                        <button class="back-button" onclick="goBack('anime-details-6')">Back</button>
-                            <iframe width="1080" height="615" src="https://www.youtube.com/embed/SjYlGEvG2Go" frameborder="0" allowfullscreen></iframe>
-                        <div class="video-box">
-                            <button class="crunchyroll-button" onclick="window.location.href='https://www.crunchyroll.com/'">Crunchyroll button</button>
-                            <div class="anime-info">
-                                Genre: <span>Shounen, Action, Adventure, Comedy, Romance</span><br>
-                                <br>
-                                Author: <span>Hiro Mashima</span><br>
-                                <br>
-                                Year Published: <span>2006</span><br>
-                                <br>
-                                Episodes: <span>568</span><br>
-                                <br>
-                                Studio: <span>A-1 Pictures, Dentsu Inc., Satelight, Bridge, CloverWorks</span><br>
-                            </div>
-                            <div class="found-like">Found what you like?</div>
-                        </div>
-                    </div>
                 </div>
             </div>
         <!-- This is the seventh row ------------------------------------------------------------------------------------------------------------------------------>
