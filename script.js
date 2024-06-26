@@ -353,6 +353,12 @@ document.addEventListener('DOMContentLoaded', () => {
             subtitle: 'Go beyond PLUS ULTRA...',
             imageUrl: 'MHA-poster.png',
             linkUrl: 'https://www.crunchyroll.com/'
+        },
+        {
+            title: 'Kaiju No.8',
+            subtitle: 'A beast a man...',
+            imageUrl: 'Kaiju-poster.png',
+            linkUrl: 'https://www.crunchyroll.com/'
         }
     ];
 
